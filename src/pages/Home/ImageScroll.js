@@ -5,6 +5,7 @@ import Typograpghy from "../../components/Typography/Typograpghy";
 import NotableAlumni1 from "../../Images/NotableAlumni.png";
 import NextIcon from "../../Images/NextIcon";
 import PrevIcon from "../../Images/PrevIcon";
+import { devices } from "../../styles/mediaQueries";
 
 const Wrapper = styled.div`
   padding: 10rem 0rem;
@@ -17,11 +18,19 @@ const Wrapper = styled.div`
  > div {
     width: 85%;
     margin: 0px auto;
+
+    @media ${devices.phone} {
+      width: 95%;
+    }
   }
 
   .body {
     width: 80%;
     margin: 0px auto;
+
+    @media ${devices.phone} {
+      width: 100%;
+    }
   }
 `;
 
@@ -38,6 +47,15 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  svg {
+    width: 4rem;
+    height: 6rem;
+
+    @media ${devices.phone} {
+      height: 4rem;
+    }
+  }
 `;
 const ImageScroll = () => {
   return (

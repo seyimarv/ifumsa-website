@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./styles/colors";
+import { devices } from "./styles/mediaQueries";
 
 export default createGlobalStyle`
 *,
@@ -16,20 +16,16 @@ html {
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
 
-    @include respond(tab-land) { // width < 1200?
+    @media ${devices.phone} { // width < 1200?
         font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
     }
 
-    @include respond(tab-port) { // width < 900?
+    @media ${devices.tabport} { // width < 900?
         font-size: 50%; //1 rem = 8px, 8/16 = 50%
     }
 
-    @include respond(phone) { // width < 900?
+    @media ${devices.tabland} { // width < 900?
         font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    }
-    
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
     }
 
 

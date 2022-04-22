@@ -12,4 +12,5 @@ font-size: 18px;
 line-height: 27px;
 letter-spacing: -0.015em;
 font-weight: 700;
+position: relative;
 `

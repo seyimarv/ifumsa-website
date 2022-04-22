@@ -10,6 +10,7 @@ import { Button } from "../../components/Button";
 import QuoteImage from "../../Images/Quote";
 import ImageScroll from "./ImageScroll";
 import { Input } from "../../components/Input/Input";
+import { devices } from "../../styles/mediaQueries";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -28,6 +29,14 @@ const Picture1Wrapper = styled.div`
   margin: 0rem auto;
   padding: 2rem 0rem;
   border-bottom: 1px solid ${colors.primary};
+  @media ${devices.tabport} {
+    height: 50rem;
+    padding: 1rem 0rem;
+  }
+  @media ${devices.phone} {
+    height: 25rem;
+    padding: 1rem 0rem;
+  }
 `;
 
 const Picture2 = styled.img`
@@ -38,6 +47,23 @@ const Picture2 = styled.img`
 const Section1 = styled(Row)`
   width: 83%;
   margin: 4rem auto;
+
+  > :first-child {
+    padding-right: 8rem;
+    margin-top: 4rem;
+    @media ${devices.tabport} {
+      padding-right: 0rem;
+    }
+  }
+
+  > :nth-child(2) {
+    @media ${devices.tabport} {
+      padding-top: 4rem;
+    }
+  }
+  @media ${devices.phone} {
+    width: 95%;
+  }
 `;
 
 const Section2 = styled.div`
@@ -48,6 +74,16 @@ const Section2 = styled.div`
     width: 83%;
     height: 100%;
     margin: 0rem auto;
+    @media ${devices.phone} {
+      width: 95%;
+    }
+    > :nth-child(2) {
+      padding-left: 8rem;
+      margin-top: 4rem;
+      @media ${devices.tabport} {
+        padding-left: 0rem;
+      }
+    }
   }
 `;
 
@@ -58,9 +94,17 @@ const Section3 = styled.div`
     padding: 14rem 0px;
     width: 70%;
     margin: 0px auto;
+
+    @media ${devices.phone} {
+      width: 90%;
+    }
   }
   .quote {
     position: absolute;
+    svg {
+      height: 15rem;
+      width: 15rem;
+    }
   }
   .up {
     top: 1.5rem;
@@ -83,8 +127,10 @@ const Section4 = styled.div`
   button {
     margin-top: 4rem;
   }
+  @media ${devices.phone} {
+    width: 90%;
+  }
 `;
-
 
 const Home = () => {
   return (
@@ -93,13 +139,7 @@ const Home = () => {
         <Picture1 alt="ifumsa" src={picture1} />
       </Picture1Wrapper>
       <Section1 noGutters>
-        <Col
-          lg={8}
-          style={{
-            marginTop: "4rem",
-            paddingRight: "8rem",
-          }}
-        >
+        <Col>
           <Typograpghy
             color={colors.secondary}
             size="3.6rem"
@@ -129,7 +169,7 @@ const Home = () => {
             Read more
           </Button>
         </Col>
-        <Col>
+        <Col lg={4}>
           <Picture2 alt="ifumsa" src={picture2} />
         </Col>
       </Section1>
@@ -138,13 +178,7 @@ const Home = () => {
           <Col lg={4}>
             <Picture2 alt="ifumsa" src={President} />
           </Col>
-          <Col
-            lg={8}
-            style={{
-              marginTop: "4rem",
-              paddingLeft: "8rem",
-            }}
-          >
+          <Col lg={8}>
             <Typograpghy
               color={colors.secondary}
               size="3.6rem"
@@ -236,6 +270,7 @@ const Home = () => {
           size="3.6rem"
           mt="13rem"
           mb="5.8rem"
+          lineHeight="4.3rem"
         >
           Sign up for IFUMSA newsletter
         </Typograpghy>

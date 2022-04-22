@@ -6,6 +6,7 @@ import Typograpghy from "../Typography/Typograpghy";
 import Location from "../../Images/Location";
 import PhoneCall from "../../Images/Phone-call";
 import Envelope from "../../Images/envelope";
+import { devices } from "../../styles/mediaQueries";
 
 const Links = [
   {
@@ -36,12 +37,31 @@ const Links = [
 const Wrapper = styled.div`
   background: ${colors.primary};
   padding: 7rem 0px;
-
+  overflow-x: hidden;
   .body {
     width: 77%;
     margin: 0px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    > div {
+      justify-content: space-between;
+      display: flex;
+      width: 70%;
+
+      @media ${devices.phone} {
+      width: 100%;
+      margin-top: 2rem;
+
+      >:first-child {
+        padding-right: 1rem;
+      }
+    }
+    }
+    @media ${devices.phone} {
+      width: 100%;
+      padding: 0rem 1.5rem;
+    }
 
     img {
       height: 8rem;
@@ -75,47 +95,65 @@ const ContactUs = styled.div`
   max-width: 40rem;
 `;
 
+const FooterTypo = styled(Typograpghy)`
+ @media ${devices.phone} {
+      font-size: 1.8rem !important;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+`;
+
+const FooterTitle = styled(Typograpghy)`
+@media ${devices.phone} {
+      font-size: 2rem !important;
+    }
+`;
 const Footer = () => {
   return (
     <Wrapper>
       <div className="body">
         <img alt="logo" src={whitelogo} />
+        <div>
         <QuickLinks>
-          <Typograpghy color={colors.white} size="2.6rem" lineHeight="2.1rem">
+          <FooterTitle color={colors.white} size="2.6rem" lineHeight="2.1rem">
             QuickLinks
-          </Typograpghy>
+          </FooterTitle>
           <ul className="list">
             {Links.map(({ label, path }) => {
               return (
                 <li>
-                  <Typograpghy color={colors.white} size="2.3rem">
+                  <FooterTypo color={colors.white} size="2.3rem">
                     {label}
-                  </Typograpghy>
+                  </FooterTypo>
                 </li>
               );
             })}
           </ul>
         </QuickLinks>
         <ContactUs>
-          <Typograpghy color={colors.white} size="2.6rem" lineHeight="2.1rem">
+          <FooterTitle color={colors.white} size="2.6rem" lineHeight="2.1rem">
             Contact Us
-          </Typograpghy>
+          </FooterTitle>
           <div className="contacts">
-            <Typograpghy color={colors.white} size="2.3rem">
+            <FooterTypo color={colors.white} size="2.3rem">
               <Location />
               College of Health Sciences, Senate Building Rd., Obafemi Awolowo
               University, Ile-Ife
-            </Typograpghy>
-            <Typograpghy color={colors.white} size="2.3rem">
+            </FooterTypo>
+            <FooterTypo color={colors.white} size="2.3rem">
               <Envelope />
               ifumsacohs@oauife.edu.ng
-            </Typograpghy>
-            <Typograpghy color={colors.white} size="2.3rem">
+            </FooterTypo>
+            <FooterTypo color={colors.white} size="2.3rem">
               <PhoneCall />
               +234 0813 XXX XX09
-            </Typograpghy>
+            </FooterTypo>
           </div>
         </ContactUs>
+        </div>
       </div>
       <Typograpghy
         color={colors.secondary}
