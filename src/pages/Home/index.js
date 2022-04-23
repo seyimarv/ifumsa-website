@@ -208,6 +208,7 @@ const Home = () => {
               }}
             >
               Read more
+              <Shine />
             </Button>
           </Col>
         </Row>

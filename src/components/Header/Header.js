@@ -5,11 +5,12 @@ import Typograpghy from "../Typography/Typograpghy";
 import { colors } from "../../styles/colors";
 import { devices } from "../../styles/mediaQueries";
 import { useOnClickOutside } from "./utils";
+import { Link } from "react-router-dom";
 
 const NavsData = [
   {
     label: "Home",
-    path: "/home",
+    path: "/",
   },
   {
     label: "Our Structure",
@@ -95,7 +96,7 @@ const SubWrapper = styled.div`
   padding: 1rem 3rem;
   background: ${colors.primary};
   justify-content: flex-end;
-  div:not(:last-child) {
+  .links:not(:last-child) {
     margin-right: 4rem;
   }
 `;
@@ -145,24 +146,36 @@ const Header = () => {
   }, [isMobileNav]);
   return (
     <React.Fragment ref={node}>
-        <Wrapper>
-          <IfumsaLogo />
-          <NavsWrapper>
-            {NavsData.map(({ label, path }) => {
-              return <Typograpghy>{label}</Typograpghy>;
-            })}
-          </NavsWrapper>
-          <ToggleIcon onClick={onToggleMobileNav} isMobileNav={isMobileNav} />
-        </Wrapper>
+      <Wrapper>
+        <IfumsaLogo />
+        <NavsWrapper>
+          {NavsData.map(({ label, path }) => {
+            return (
+              <Link to={path} key={path}>
+                <Typograpghy>{label}</Typograpghy>
+              </Link>
+            );
+          })}
+        </NavsWrapper>
+        <ToggleIcon onClick={onToggleMobileNav} isMobileNav={isMobileNav} />
+      </Wrapper>
       <SubWrapper>
         {subHeaderData.map(({ label, path }) => {
-          return <Typograpghy color={colors.white}>{label}</Typograpghy>;
+          return (
+            <Link to={path} key={path} className='links'>
+              <Typograpghy color={colors.white}>{label}</Typograpghy>
+            </Link>
+          );
         })}
       </SubWrapper>
       <MobileNav isMobileNav={isMobileNav} ref={node}>
         <IfumsaLogo />
         {NavsData.map(({ label, path }) => {
-          return <Typograpghy>{label}</Typograpghy>;
+          return (
+            <Link to={path} key={path} >
+              <Typograpghy>{label}</Typograpghy>
+            </Link>
+          );
         })}
       </MobileNav>
     </React.Fragment>
