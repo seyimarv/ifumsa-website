@@ -11,6 +11,7 @@ import QuoteImage from "../../Images/Quote";
 import ImageScroll from "./ImageScroll";
 import { Input } from "../../components/Input/Input";
 import { devices } from "../../styles/mediaQueries";
+import { Shine } from "../../components/Button/shine";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -167,6 +168,7 @@ const Home = () => {
             }}
           >
             Read more
+            <Shine />
           </Button>
         </Col>
         <Col lg={4}>
@@ -279,7 +281,9 @@ const Home = () => {
           color={colors.primary}
           background={colors.gray2}
         />
-        <Button isPrimary>Sign up</Button>
+        <Button isPrimary>
+          Sign up <Shine />
+        </Button>
       </Section4>
     </Wrapper>
   );
