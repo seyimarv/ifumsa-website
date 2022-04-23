@@ -8,6 +8,8 @@ import { Navigation, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import NextIcon from "../../Images/NextIcon";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,16 +29,12 @@ const Wrapper = styled.div`
     color: #faffbf;
     :after {
       font-size: 4rem !important;
-      ${'' /* display: none; */}
     }
     ${'' /* .swiper-button-next {
-      background-image: url('../../Images/President.png');
+      background-image: url(${NextIcon});
       background-repeat: no-repeat;
       background-size: 100% auto;
       background-position: center;
-      width: 40rem;
-      height: 40rem;
-      background: red;
     } */}
   }
 
