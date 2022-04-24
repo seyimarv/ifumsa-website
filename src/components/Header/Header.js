@@ -5,7 +5,7 @@ import Typograpghy from "../Typography/Typograpghy";
 import { colors } from "../../styles/colors";
 import { devices } from "../../styles/mediaQueries";
 import { useOnClickOutside } from "./utils";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const NavsData = [
   {
@@ -138,12 +138,17 @@ const ToggleIcon = styled.div`
 const Header = () => {
   const [isMobileNav, setIsMobileNav] = useState(false);
   const node = useRef();
+  const navigate = useNavigate()
   useOnClickOutside(node, () => setIsMobileNav(false));
   const onToggleMobileNav = useCallback(() => {
     if (!isMobileNav) {
       setIsMobileNav(true);
     } else setIsMobileNav(false);
   }, [isMobileNav]);
+  const changeRoute = useCallback((path) => {
+    navigate(path)
+    setIsMobileNav(false)
+  }, [])
   return (
     <React.Fragment ref={node}>
       <Wrapper>
@@ -151,9 +156,7 @@ const Header = () => {
         <NavsWrapper>
           {NavsData.map(({ label, path }) => {
             return (
-              <Link to={path} key={path}>
-                <Typograpghy>{label}</Typograpghy>
-              </Link>
+                <Typograpghy onClick={() => changeRoute(path)} key={path}>{label}</Typograpghy>
             );
           })}
         </NavsWrapper>
@@ -172,9 +175,7 @@ const Header = () => {
         <IfumsaLogo />
         {NavsData.map(({ label, path }) => {
           return (
-            <Link to={path} key={path} >
-              <Typograpghy>{label}</Typograpghy>
-            </Link>
+            <Typograpghy onClick={() => changeRoute(path)} key={path}>{label}</Typograpghy>
           );
         })}
       </MobileNav>
