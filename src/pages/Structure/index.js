@@ -6,15 +6,11 @@ import AboutImage from "../../Images/about.png";
 import ActivitiesImage from "../../Images/ActivitiesImage.png";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
-import { Button } from "../../components/Button";
-import { Shine } from "../../components/Button/shine";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
   margin: 0rem;
   overflow-x: hidden;
-
-
 `;
 
 const Picture = styled.img`
