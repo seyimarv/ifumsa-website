@@ -1,4 +1,5 @@
 import React from "react";
+// import GoogleMap from "../../components/GoogleMap"
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
@@ -8,6 +9,12 @@ import { devices } from "../../styles/mediaQueries";
 import { Button } from "../../components/Button";
 import { Shine } from "../../components/Button/shine";
 import { Input } from "../../components/Input/Input";
+
+// const location = {
+//     address: "SPECTRA RESTAURANT, GG8G+J84, Obafemi Awolowo University, behind college of health sciences car park, 220005, Ife",
+//     lat: "7.5165",
+//     lng: "4.5258",
+// }
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -51,6 +58,14 @@ const Section2 = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3rem;
+
+    @media ${devices.phone} {
+        padding: 2rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+    }
   }
 
   .form-left {
@@ -60,10 +75,10 @@ const Section2 = styled.div`
     grid-row-gap: 1.5rem;
   }
 
-  .button{
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
 `;
 
@@ -134,9 +149,9 @@ function index() {
           </div>
         </div>
         <div className="button">
-        <Button isPrimary>
-          Send Message <Shine />
-        </Button>
+          <Button isPrimary>
+            Send Message <Shine />
+          </Button>
         </div>
       </Section2>
 
@@ -160,6 +175,9 @@ function index() {
           Sign up <Shine />
         </Button>
       </Section3>
+      {/* <div>
+          <GoogleMap location={location} zoomLevel={17}/>
+      </div> */}
     </Wrapper>
   );
 }
