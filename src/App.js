@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
+import Leadership from "./pages/Leadership";
 function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/leadership" element={<Leadership />} />
       </Routes>
       <Footer />
     </div>
