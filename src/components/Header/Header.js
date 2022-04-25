@@ -138,7 +138,7 @@ const ToggleIcon = styled.div`
 const Header = () => {
   const [isMobileNav, setIsMobileNav] = useState(false);
   const node = useRef();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   useOnClickOutside(node, () => setIsMobileNav(false));
   const onToggleMobileNav = useCallback(() => {
     if (!isMobileNav) {
@@ -146,9 +146,9 @@ const Header = () => {
     } else setIsMobileNav(false);
   }, [isMobileNav]);
   const changeRoute = useCallback((path) => {
-    navigate(path)
-    setIsMobileNav(false)
-  }, [])
+    navigate(path);
+    setIsMobileNav(false);
+  }, [navigate]);
   return (
     <React.Fragment ref={node}>
       <Wrapper>
@@ -156,7 +156,9 @@ const Header = () => {
         <NavsWrapper>
           {NavsData.map(({ label, path }) => {
             return (
-                <Typograpghy onClick={() => changeRoute(path)} key={path}>{label}</Typograpghy>
+              <Link to={path} key={path}>
+                <Typograpghy>{label}</Typograpghy>
+              </Link>
             );
           })}
         </NavsWrapper>
@@ -165,7 +167,7 @@ const Header = () => {
       <SubWrapper>
         {subHeaderData.map(({ label, path }) => {
           return (
-            <Link to={path} key={path} className='links'>
+            <Link to={path} key={path} className="links">
               <Typograpghy color={colors.white}>{label}</Typograpghy>
             </Link>
           );
@@ -175,7 +177,9 @@ const Header = () => {
         <IfumsaLogo />
         {NavsData.map(({ label, path }) => {
           return (
-            <Typograpghy onClick={() => changeRoute(path)} key={path}>{label}</Typograpghy>
+            <Typograpghy onClick={() => changeRoute(path)} key={path}>
+              {label}
+            </Typograpghy>
           );
         })}
       </MobileNav>
