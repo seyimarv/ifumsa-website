@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
 export const Input = styled.input`
-border:  ${({ coloredBorder }) => coloredBorder ? `1px solid ${colors.green}` : 'none'};
+border:  ${({ coloredBorder }) => coloredBorder ? `1px solid ${colors.primary}` : 'none'};
 padding: 2rem;
 background-color: ${({ background }) => background || colors.white};
 border-radius: 10px;
