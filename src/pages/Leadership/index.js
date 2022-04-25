@@ -10,7 +10,6 @@ import { Council } from "./utils";
 
 const array = [1, 2, 3, 4, 5, 6];
 
-
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
   margin: 0rem;
@@ -48,8 +47,8 @@ const GridContainer = styled.div`
   margin: 0rem 7.5rem;
 
   @media ${devices.phone} {
-      margin: 0rem 2rem;
-    }
+    margin: 0rem 2rem;
+  }
   .grid {
     padding-top: 1rem;
     padding-bottom: 7rem;
@@ -135,32 +134,32 @@ const Leadership = () => {
           align="center"
         >
           Executive Council
-          <div className="grid">
-            {Council.map((data) => {
-              return (
-                <Member>
-                  <img alt="ima" src={data.image} key={data.name} />
-                  <Typograpghy
-                    size="2.1rem"
-                    lineHeight="2.6rem"
-                    fontWeight="700"
-                    mt="1.7rem"
-                  >
-                    {data.name}
-                  </Typograpghy>
-                  <Typograpghy
-                    mt="1.4rem"
-                    lineHeight="2rem"
-                    size="1.7rem"
-                    fontWeight="500"
-                  >
-                    {data.title}
-                  </Typograpghy>
-                </Member>
-              );
-            })}
-          </div>
         </Typograpghy>
+        <div className="grid">
+          {Council.map((data) => {
+            return (
+              <Member>
+                <img alt="ima" src={data.image} key={data.name} />
+                <Typograpghy
+                  size="2.1rem"
+                  lineHeight="2.6rem"
+                  fontWeight="700"
+                  mt="1.7rem"
+                >
+                  {data.name}
+                </Typograpghy>
+                <Typograpghy
+                  mt="1.4rem"
+                  lineHeight="2rem"
+                  size="1.7rem"
+                  fontWeight="500"
+                >
+                  {data.title}
+                </Typograpghy>
+              </Member>
+            );
+          })}
+        </div>
       </GridContainer>
       <GridContainer>
         <Typograpghy
