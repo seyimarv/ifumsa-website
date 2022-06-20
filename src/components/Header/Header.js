@@ -87,11 +87,14 @@ const MobileNav = styled.div`
   padding-bottom: 10rem;
   padding-left: 10%;
   padding-top: 5rem;
-  justify-content: space-between;
   flex-direction: column;
   transition: all 0.5s;
   transform: translateX(-100%);
   display: flex;
+
+ > * {
+    margin-top: 5rem;
+ }
 
   @media ${devices.tabport} {
     transform: ${({ isMobileNav }) => (isMobileNav ? "translateX(0)" : "")};

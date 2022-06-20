@@ -70,7 +70,7 @@ const Member = styled.div`
   width: 28rem;
   img {
     width: 100%;
-    height: 35rem;
+    height: auto;
     border-radius: 1.1rem;
   }
 `;

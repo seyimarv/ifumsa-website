@@ -52,9 +52,11 @@ const Wrapper = styled.div`
       @media ${devices.phone} {
       width: 100%;
       margin-top: 2rem;
+      flex-direction: column;
 
       >:first-child {
         padding-right: 1rem;
+        margin-bottom: 4rem;
       }
     }
     }

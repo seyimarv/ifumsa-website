@@ -41,17 +41,25 @@ const Picture1Wrapper = styled.div`
 const Picture2 = styled.img`
   height: auto;
   max-width: 38rem;
+
+  @media ${devices.tabport} {
+      max-width: 100%;
+      width: 100%;
+    }
+    @media ${devices.phone} {
+   
+    }
 `;
 
 const Section1 = styled(Row)`
   width: 83%;
   margin: 4rem auto;
-
+  display: flex;
+  align-items: center;
   > :first-child {
     padding-right: 8rem;
-    margin-top: 4rem;
     @media ${devices.tabport} {
-      padding-right: 0rem;
+      padding-right: 2rem;
     }
   }
 
@@ -138,7 +146,7 @@ const Home = () => {
         <Picture1 alt="ifumsa" src={picture1} />
       </Picture1Wrapper>
       <Section1 noGutters>
-        <Col>
+        <Col lg={8}>
           <Typograpghy
             color={colors.secondary}
             size="3.6rem"
@@ -150,14 +158,20 @@ const Home = () => {
             About Us
           </Typograpghy>
           <Typograpghy>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit. Etiam iaculis finibus
-            egestas. Nam viverra urna quis odio efficitur malesuada. Maecenas
-            rhoncus enim eu scelerisque rutrum.
+            Obafemi Awolowo University Students’ Association, usually
+            abbreviated as IFUMSA is the umbrella body of the Medical Students
+            in the Obafemi Awolowo University. IFUMSA was founded in September
+            1972, by the foundation students of the Faculty of Health Sciences
+            (now College of Health Sciences) which was established May 8, 1972.
+            The year 2022 makes it 50 years that the association has been in
+            existence. We are a vibrant student body with over 700 members and
+            an associated illustrious Alumni Body. The 44 seat IFUMSA
+            Parliament, the leadership of the association, popularly known as
+            the Student Representative Body (SRB) of IFUMSA, comprises;10
+            Executive Council members whose activities are coordinated by the
+            President of the Association, 30 Students’ Representative Body (SRB)
+            members and; 4 Ex-Officio members, is chaired by the Speaker of the
+            House
           </Typograpghy>
           <Button
             isPrimary
