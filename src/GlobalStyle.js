@@ -26,7 +26,7 @@ html {
 
 
     @media ${devices.phone} { // width < 1200?
-        font-size: 40%; //1 rem = 9px, 9/16 = 50%
+        font-size: 55%; //1 rem = 9px, 9/16 = 50%
     }
 }
 
