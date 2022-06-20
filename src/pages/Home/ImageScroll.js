@@ -8,8 +8,6 @@ import { Navigation, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import NextIcon from "../../Images/NextIcon";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";

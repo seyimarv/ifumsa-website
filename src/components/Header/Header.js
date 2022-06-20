@@ -1,11 +1,11 @@
-import React, { useCallback, useState, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import styled from "styled-components";
 import { ReactComponent as IfumsaLogo } from "../../Images/IFUMSA LOGO.svg";
 import Typograpghy from "../Typography/Typograpghy";
 import { colors } from "../../styles/colors";
 import { devices } from "../../styles/mediaQueries";
 import { useOnClickOutside } from "./utils";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavsData = [
   {
@@ -58,6 +58,13 @@ const Wrapper = styled.div`
   z-index: 998;
   position: sticky;
   top: 0px;
+
+  .logo {
+    @media ${devices.phone} {
+      max-width: 8rem;
+      height: auto;
+    }
+  }
 `;
 const NavsWrapper = styled.div`
   display: flex;
@@ -108,7 +115,7 @@ const ToggleIcon = styled.div`
   &::before,
   &::after {
     width: 4rem;
-    height: 2px;
+    height: .2rem;
     background-color: ${colors.primary};
     z-index: 1200;
     display: none;
@@ -135,8 +142,7 @@ const ToggleIcon = styled.div`
     transform: ${(props) => (props.isMobileNav ? "rotate(-135deg)" : "")};
   }
 `;
-const Header = () => {
-  const [isMobileNav, setIsMobileNav] = useState(false);
+const Header = ({isMobileNav, setIsMobileNav}) => {
   const node = useRef();
   const navigate = useNavigate();
   useOnClickOutside(node, () => setIsMobileNav(false));
@@ -144,15 +150,18 @@ const Header = () => {
     if (!isMobileNav) {
       setIsMobileNav(true);
     } else setIsMobileNav(false);
-  }, [isMobileNav]);
-  const changeRoute = useCallback((path) => {
-    navigate(path);
-    setIsMobileNav(false);
-  }, [navigate]);
+  }, [isMobileNav, setIsMobileNav]);
+  const changeRoute = useCallback(
+    (path) => {
+      navigate(path);
+      setIsMobileNav(false);
+    },
+    [navigate, setIsMobileNav]
+  );
   return (
-    <React.Fragment ref={node}>
+    <React.Fragment>
       <Wrapper>
-        <IfumsaLogo />
+        <IfumsaLogo className="logo" />
         <NavsWrapper>
           {NavsData.map(({ label, path }) => {
             return (

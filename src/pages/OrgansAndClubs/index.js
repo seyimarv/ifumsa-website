@@ -40,7 +40,7 @@ const Section1 = styled.div`
 `;
 
 const Picture = styled.img`
-  height: 100%;
+  height: auto;
   width: 100%;
 `;
 

@@ -17,7 +17,7 @@ const Wrapper = styled(Container)`
 `;
 
 const Picture1 = styled.img`
-  height: 100%;
+  height: auto;
   width: 100%;
 `;
 

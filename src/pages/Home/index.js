@@ -25,24 +25,22 @@ const Picture1 = styled.img`
   border-bottom: 1px solid ${colors.primary};
 `;
 const Picture1Wrapper = styled.div`
-  width: 96%;
-  height: 80rem;
+  max-width: 96%;
+  height: auto;
   margin: 0rem auto;
   padding: 2rem 0rem;
   border-bottom: 1px solid ${colors.primary};
   @media ${devices.tabport} {
-    height: 50rem;
     padding: 1rem 0rem;
   }
   @media ${devices.phone} {
-    height: 25rem;
     padding: 1rem 0rem;
   }
 `;
 
 const Picture2 = styled.img`
-  height: 40rem;
-  width: 38rem;
+  height: auto;
+  max-width: 38rem;
 `;
 
 const Section1 = styled(Row)`

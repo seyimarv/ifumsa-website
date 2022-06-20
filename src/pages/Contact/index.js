@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 // import GoogleMap from "../../components/GoogleMap"
 import { Container } from "react-bootstrap";
@@ -23,7 +24,7 @@ const Wrapper = styled(Container)`
 `;
 
 const Picture = styled.img`
-  height: 100%;
+  height: auto;
   width: 100%;
 `;
 
@@ -60,7 +61,7 @@ const Section2 = styled.div`
     grid-column-gap: 3rem;
 
     @media ${devices.phone} {
-        padding: 2rem 0 2rem;
+      padding: 2rem 0 2rem;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, 1fr);
@@ -175,9 +176,13 @@ function index() {
           Sign up <Shine />
         </Button>
       </Section3>
-      {/* <div>
-          <GoogleMap location={location} zoomLevel={17}/>
-      </div> */}
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.534469638717!2d4.523631014930581!3d7.516529112907151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103830d95c1720d1%3A0xf29f9240540306ec!2sSPECTRA%20RESTAURANT!5e0!3m2!1sen!2sng!4v1655746689341!5m2!1sen!2sng"
+        width="100%"
+        height="728"
+        frameBorder="0"
+        allowFullScreen=""
+      />
     </Wrapper>
   );
 }
