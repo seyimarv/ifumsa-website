@@ -42,24 +42,36 @@ const Picture2 = styled.img`
   height: auto;
   max-width: 38rem;
 
-  @media ${devices.tabport} {
-      max-width: 100%;
-      width: 100%;
-    }
-    @media ${devices.phone} {
-   
-    }
+  @media ${devices.tabland} {
+    max-width: 100%;
+    width: 100%;
+  }
+  @media ${devices.phone} {
+  }
 `;
 
-const Section1 = styled(Row)`
+const Section1 = styled.div`
   width: 83%;
   margin: 4rem auto;
   display: flex;
   align-items: center;
+  @media ${devices.tabland} {
+    width: 90%;
+  }
+  @media ${devices.tabport} {
+    flex-direction: column;
+    align-items: flex-start;
+    > * {
+      width: 100%;
+    }
+  }
+
   > :first-child {
     padding-right: 8rem;
+    max-width: 70%;
     @media ${devices.tabport} {
       padding-right: 2rem;
+      max-width: 100%;
     }
   }
 
@@ -77,18 +89,36 @@ const Section2 = styled.div`
   background: ${colors.primary};
   padding: 4rem 0px;
 
-  .row {
+  .content-row {
     width: 83%;
     height: 100%;
     margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    @media ${devices.tabland} {
+      width: 90%;
+    }
+    @media ${devices.tabport} {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
     @media ${devices.phone} {
       width: 95%;
     }
+    > div {
+      @media ${devices.tabport} {
+        width: 100%;
+      }
+    }
     > :nth-child(2) {
-      padding-left: 8rem;
+      padding-left: 4rem;
       margin-top: 4rem;
+      max-width: 70%;
+      justify-self: flex-end;
       @media ${devices.tabport} {
         padding-left: 0rem;
+        max-width: 100%;
       }
     }
   }
@@ -102,6 +132,9 @@ const Section3 = styled.div`
     width: 70%;
     margin: 0px auto;
 
+    @media ${devices.tabland} {
+      width: 80%;
+    }
     @media ${devices.phone} {
       width: 90%;
     }
@@ -134,6 +167,9 @@ const Section4 = styled.div`
   button {
     margin-top: 4rem;
   }
+  @media ${devices.tabland} {
+    width: 80%;
+  }
   @media ${devices.phone} {
     width: 90%;
   }
@@ -146,7 +182,7 @@ const Home = () => {
         <Picture1 alt="ifumsa" src={picture1} />
       </Picture1Wrapper>
       <Section1 noGutters>
-        <Col lg={8}>
+        <div>
           <Typograpghy
             color={colors.secondary}
             size="3.6rem"
@@ -182,17 +218,17 @@ const Home = () => {
             Read more
             <Shine />
           </Button>
-        </Col>
-        <Col lg={4}>
+        </div>
+        <div>
           <Picture2 alt="ifumsa" src={picture2} />
-        </Col>
+        </div>
       </Section1>
       <Section2>
-        <Row>
-          <Col lg={4}>
+        <div className="content-row">
+          <div>
             <Picture2 alt="ifumsa" src={President} />
-          </Col>
-          <Col lg={8}>
+          </div>
+          <div>
             <Typograpghy
               color={colors.secondary}
               size="3.6rem"
@@ -222,8 +258,8 @@ const Home = () => {
               Read more
               <Shine />
             </Button>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Section2>
       <Section3>
         <div className="quote up">
