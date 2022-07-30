@@ -93,7 +93,7 @@ const MobileNav = styled.div`
   display: flex;
   bottom: 0px;
   > * {
-    padding: 4rem 0rem;
+    padding: 2rem 0rem;
   }
 
   @media ${devices.tabport} {
@@ -209,7 +209,7 @@ const Header = ({ isMobileNav, setIsMobileNav }) => {
               onClick={() => changeRoute(path)}
               key={path}
               color={path !== pathname ? colors.white : colors.secondary}
-              size="3rem"
+              size="2.3rem"
             >
               {label}
             </Typograpghy>
