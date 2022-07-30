@@ -40,7 +40,7 @@ const Section1 = styled.div`
 `;
 
 const Picture = styled.img`
-  height: auto;
+  min-height: 10rem;
   width: 100%;
 `;
 
@@ -51,13 +51,13 @@ const EachSection = styled.div`
   flex-direction: row;
   border-bottom: 2px solid ${colors.primary};
 
-  :last-child{
+  :last-child {
     border-bottom: none;
   }
 
   @media ${devices.tabport} {
     padding: 4rem 2rem;
-    margin: 0 1rem; 
+    margin: 0 1rem;
   }
 
   @media ${devices.phone} {
@@ -71,7 +71,7 @@ const EachSection = styled.div`
     width: 40rem;
   }
 
-  span{
+  span {
     font-weight: 700;
   }
 
@@ -81,7 +81,7 @@ const EachSection = styled.div`
 
   .flex-right {
     flex: 3;
-    padding-left:3rem;
+    padding-left: 3rem;
 
     @media ${devices.phone} {
       padding-left: 0;
@@ -114,38 +114,39 @@ function OrgansAndClubs() {
             IFUMSA Alumni Relations Committee
           </Typograpghy>
           <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit.
-        </Typograpghy>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit.
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor eget aliquam
+            hendrerit.
+          </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
         </div>
         <div className="flex-right">
           <Picture src={ActivitiesImg7} />
@@ -162,38 +163,38 @@ function OrgansAndClubs() {
             IFUMSA Quiz {"&"} Debate Club
           </Typograpghy>
           <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          <span>IFUMSA Quiz {"&"} Debate Club</span>, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit. 
-        </Typograpghy>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit.
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            <span>IFUMSA Quiz {"&"} Debate Club</span>, consectetur adipiscing
+            elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
+            nunc. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
+            egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
+            metus. Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
         </div>
         <div className="flex-right">
           <Picture src={ActivitiesImage} />
@@ -210,38 +211,38 @@ function OrgansAndClubs() {
             IFUMSA Health Awareness Club
           </Typograpghy>
           <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          <span>IFUMSA Health Awareness Club</span>, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit.
-        </Typograpghy>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit. 
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            <span>IFUMSA Health Awareness Club</span>, consectetur adipiscing
+            elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
+            nunc. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
+            egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
+            metus. Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
         </div>
         <div className="flex-right">
           <Picture src={IHACBloodDrive} />
@@ -258,38 +259,38 @@ function OrgansAndClubs() {
             Medivoice
           </Typograpghy>
           <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          <span>Medivoice</span>, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit. 
-        </Typograpghy>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="2.3rem"
-          size='1.5rem'
-          style={{ paddingTop: "2rem" }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula
-          nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-          Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-          congue dolor eget aliquam hendrerit. 
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            <span>Medivoice</span>, consectetur adipiscing elit. Donec ligula
+            nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
+            Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
+            congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="2.3rem"
+            size="1.5rem"
+            style={{ paddingTop: "2rem" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
         </div>
         <div className="flex-right">
           <Picture src={Medivoice} />

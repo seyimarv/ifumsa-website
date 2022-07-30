@@ -7,15 +7,15 @@ import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
-import { Button } from "../../components/Button";
-import { Shine } from "../../components/Button/shine";
-import { Input } from "../../components/Input/Input";
+import ContactForm from "./contactform";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-// const location = {
-//     address: "SPECTRA RESTAURANT, GG8G+J84, Obafemi Awolowo University, behind college of health sciences car park, 220005, Ife",
-//     lat: "7.5165",
-//     lng: "4.5258",
-// }
+const {
+  REACT_APP_MAILCHIMP_API,
+  REACT_APP_MAILCHIMP_U,
+  REACT_APP_MAILCHIMP_ID,
+} = process.env;
+const url = `${REACT_APP_MAILCHIMP_API}?u=${REACT_APP_MAILCHIMP_U}&id=${REACT_APP_MAILCHIMP_ID}`;
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -83,38 +83,8 @@ const Section2 = styled.div`
   }
 `;
 
-const Section3 = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0rem 25rem;
-  margin-bottom: 13rem;
 
-  button {
-    margin-top: 4rem;
-  }
-  @media ${devices.tabland} {
-    padding: 0rem 10rem;
-  }
-  @media ${devices.phone} {
-    padding: 0rem 4rem;
-  }
-`;
-
-const MessageBox = styled.textarea`
-  width: 100%;
-  height: 100%;
-  resize: none;
-  font-size: 2rem;
-  padding: 1rem;
-  border: 1px solid ${colors.primary};
-  ::placeholder {
-    color: ${colors.primary};
-    font-weight: 500;
-  }
-`;
-
-function index() {
+const Index = () => {
   return (
     <Wrapper fluid>
       <Section1>
@@ -128,7 +98,6 @@ function index() {
           Contact Us
         </Typograpghy>
       </Section1>
-
       <Section2>
         <Typograpghy
           color={colors.secondary}
@@ -139,45 +108,20 @@ function index() {
         >
           Get In Touch With Us
         </Typograpghy>
-        <div className="form-section">
-          <div className="form-left">
-            <Input placeholder="Name" color={colors.primary} coloredBorder />
-            <Input placeholder="Email" color={colors.primary} coloredBorder />
-            <Input placeholder="Subject" color={colors.primary} coloredBorder />
-          </div>
-          <div className="form-right">
-            <MessageBox placeholder="Message" />
-          </div>
-        </div>
-        <div className="button">
-          <Button isPrimary>
-            Send Message <Shine />
-          </Button>
-        </div>
+        <MailchimpSubscribe
+          url={url}
+          render={({ subscribe, status, message }) => (
+            <ContactForm
+              status={status}
+              message={message}
+              onValidated={subscribe}
+            />
+          )}
+        />
       </Section2>
 
-      <Section3>
-        <Typograpghy
-          color={colors.secondary}
-          align="center"
-          size="3.6rem"
-          mt="13rem"
-          mb="5.8rem"
-          lineHeight="4.3rem"
-        >
-          Sign up for IFUMSA newsletter
-        </Typograpghy>
-        <Input
-          placeholder="Your Email Here..."
-          color={colors.primary}
-          background={colors.gray2}
-        />
-        <Button isPrimary>
-          Sign up <Shine />
-        </Button>
-      </Section3>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.534469638717!2d4.523631014930581!3d7.516529112907151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103830d95c1720d1%3A0xf29f9240540306ec!2sSPECTRA%20RESTAURANT!5e0!3m2!1sen!2sng!4v1655746689341!5m2!1sen!2sng"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.534469638717!2d4.523631014930581!3d7.516529112907151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf4a59b9cfc43153!2sCollege%20of%20Health%20Sciences!5e0!3m2!1sen!2sng!4v1656160250577!5m2!1sen!2sng"
         width="100%"
         height="728"
         frameBorder="0"
@@ -185,6 +129,6 @@ function index() {
       />
     </Wrapper>
   );
-}
+};
 
-export default index;
+export default Index;

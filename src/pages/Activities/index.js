@@ -25,7 +25,7 @@ const Wrapper = styled(Container)`
 `;
 
 const Picture = styled.img`
-  height: 100%;
+  min-height: 10rem;
   width: 100%;
 `;
 
