@@ -18,21 +18,22 @@ import Outreach2 from "../../Images/outreach2.jpg";
 import Outreach3 from "../../Images/outreach3.jpg";
 import Outreach4 from "../../Images/outreach4.jpg";
 import Outreach5 from "../../Images/outreach5.jpg";
-import Sport1 from "../../Images/sport1.jpg"
-import Sport2 from "../../Images/sport2.jpg"
-import Sport3 from "../../Images/sport3.jpg"
-import Sport4 from "../../Images/sport4.jpg"
-import Sport5 from "../../Images/sport5.jpg"
-import Academic1 from "../../Images/Academic1.jpg"
-import Academic2 from "../../Images/Academic2.jpg"
-import Academic3 from "../../Images/Academic3.jpg"
-import Academic4 from "../../Images/Academic4.jpg"
-import Academic5 from "../../Images/Academic5.jpg"
-import Social1 from "../../Images/Social1.jpg"
-import Social2 from "../../Images/Social2.jpg"
-import Social3 from "../../Images/Social3.jpg"
-import Social4 from "../../Images/Social4.jpg"
-import Social5 from "../../Images/social5.jpg"
+import Sport1 from "../../Images/sport1.jpg";
+import Sport2 from "../../Images/sport2.jpg";
+import Sport3 from "../../Images/sport3.jpg";
+import Sport4 from "../../Images/sport4.jpg";
+import Sport5 from "../../Images/sport5.jpg";
+import Academic1 from "../../Images/Academic1.jpg";
+import Academic2 from "../../Images/Academic2.jpg";
+import Academic3 from "../../Images/Academic3.jpg";
+import Academic4 from "../../Images/Academic4.jpg";
+import Academic5 from "../../Images/Academic5.jpg";
+import Social1 from "../../Images/Social1.jpg";
+import Social2 from "../../Images/Social2.jpg";
+import Social3 from "../../Images/Social3.jpg";
+import Social4 from "../../Images/Social4.jpg";
+import Social5 from "../../Images/social5.jpg";
+import Image from "../../components/ImageComponent";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -40,9 +41,17 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture = styled.img`
+const Picture = styled(Image)`
   min-height: 10rem;
   width: 100%;
+`;
+
+const ActivityPictures = styled(Image)`
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  layout: fill;
 `;
 
 const Section1 = styled.div`
@@ -81,14 +90,7 @@ const EachSection = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 1rem;
-    min-height:63rem;
-
-    img {
-      height: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      layout: fill;
-    }
+    min-height: 63rem;
 
     @media ${devices.phone} {
       display: grid;
@@ -104,14 +106,6 @@ const EachSection = styled.div`
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-
-    ${'' /* img {
-      height: 30rem;
-      object-fit: cover;
-      @media ${devices.smallPhone} {
-        height: 15rem;
-      }
-    } */}
   }
 
   .button {
@@ -147,12 +141,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={Social1} />
+            <ActivityPictures src={Social1} />
             <div className="grid-right">
-              <Picture src={Social2} />
-              <Picture src={Social3} />
-              <Picture src={Social4} />
-              <Picture src={Social5} />
+              <ActivityPictures src={Social2} />
+              <ActivityPictures src={Social3} />
+              <ActivityPictures src={Social4} />
+              <ActivityPictures src={Social5} />
             </div>
           </div>
           <Typograpghy
@@ -186,12 +180,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={Sport5} />
+            <ActivityPictures src={Sport5} />
             <div className="grid-right">
-              <Picture src={Sport1} />
-              <Picture src={Sport2} />
-              <Picture src={Sport3} />
-              <Picture src={Sport4} />
+              <ActivityPictures src={Sport1} />
+              <ActivityPictures src={Sport2} />
+              <ActivityPictures src={Sport3} />
+              <ActivityPictures src={Sport4} />
             </div>
           </div>
           <Typograpghy
@@ -225,12 +219,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={Outreach2} />
+            <ActivityPictures src={Outreach2} />
             <div className="grid-right">
-              <Picture src={Outreach1} />
-              <Picture src={Outreach3} />
-              <Picture src={Outreach4} />
-              <Picture src={Outreach5} />
+              <ActivityPictures src={Outreach1} />
+              <ActivityPictures src={Outreach3} />
+              <ActivityPictures src={Outreach4} />
+              <ActivityPictures src={Outreach5} />
             </div>
           </div>
           <Typograpghy
@@ -264,12 +258,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={Academic2} />
+            <ActivityPictures src={Academic2} />
             <div className="grid-right">
-              <Picture src={Academic5} />
-              <Picture src={Academic3} />
-              <Picture src={Academic4} />
-              <Picture src={Academic1} />
+              <ActivityPictures src={Academic5} />
+              <ActivityPictures src={Academic3} />
+              <ActivityPictures src={Academic4} />
+              <ActivityPictures src={Academic1} />
             </div>
           </div>
           <Typograpghy
@@ -303,12 +297,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={ActivitiesImg9} />
+            <ActivityPictures src={ActivitiesImg9} />
             <div className="grid-right">
-              <Picture src={ActivitiesImg2} />
-              <Picture src={ActivitiesImg3} />
-              <Picture src={ActivitiesImg4} />
-              <Picture src={ActivitiesImg5} />
+              <ActivityPictures src={ActivitiesImg2} />
+              <ActivityPictures src={ActivitiesImg3} />
+              <ActivityPictures src={ActivitiesImg4} />
+              <ActivityPictures src={ActivitiesImg5} />
             </div>
           </div>
           <Typograpghy
@@ -342,12 +336,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <Picture src={EECONE} />
+            <ActivityPictures src={EECONE} />
             <div className="grid-right">
-              <Picture src={EECFOUR} />
-              <Picture src={EECSIX} />
-              <Picture src={EECTWO} />
-              <Picture src={EECFIVE} />
+              <ActivityPictures src={EECFOUR} />
+              <ActivityPictures src={EECSIX} />
+              <ActivityPictures src={EECTWO} />
+              <ActivityPictures src={EECFIVE} />
             </div>
           </div>
           <Typograpghy

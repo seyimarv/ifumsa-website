@@ -1,38 +1,48 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import styled from "styled-components";
 
 const Image = ({ src, alt, ...props }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const handleImageLoaded = useCallback(() => {
-    if (!isLoaded) {
-      setIsLoaded(true);
-    }
-  }, [isLoaded]);
-  const image = useRef();
-  useEffect(() => {
-    const img = image.current;
-    if (img && img.complete) {
-      handleImageLoaded();
-    }
-  }, [handleImageLoaded]);
-
+    setIsLoaded(true);
+  }, []);
   return (
-    <>
-      {!isLoaded && <Skeleton {...props} />}
+    <Wrapper {...props}>
+      {!isLoaded && <Skeleton className="skeleton"/>}
       <img
         src={src}
         alt={alt}
-        ref={image}
         onLoad={handleImageLoaded}
         loading="lazy"
-        {...props}
         style={{
-          display: !isLoaded && "none"
+          visibility: !isLoaded && "hidden"
         }}
       />
-    </>
+    </Wrapper>
   );
 };
 
 export default Image;
+
+const Wrapper = styled.div`
+position: relative;
+  .skeleton {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    z-index: 200;
+    position: absolute;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    layout: inherit;
+    fill: inherit;
+    max-width: inherit;
+    min-height: inherit;
+    border-radius: inherit;
+    max-height: inherit;
+  }
+`;

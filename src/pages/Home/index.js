@@ -205,7 +205,7 @@ const Home = () => {
     <Wrapper fluid>
       <Container>
         <Picture1Wrapper>
-          <Picture1 alt="ifumsa" src={picture1} className="skeleton" />
+          <Picture1 alt="ifumsa" src={picture1} />
         </Picture1Wrapper>
       </Container>
       <Container>
