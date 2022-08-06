@@ -116,7 +116,7 @@ const SubWrapper = styled.div`
 
   @media ${devices.phone} {
     .text {
-      font-size: 1rem;
+      font-size: 1.3rem;
       line-height: 1.4rem;
     }
   }
