@@ -5,6 +5,9 @@ import { Button } from "../../components/Button";
 import { colors } from "../../styles/colors";
 import styled from "styled-components";
 import { Shine } from "../../components/Button/shine";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { emailValidation } from "../../utils";
 
 const MessageBox = styled.textarea`
   width: 100%;
@@ -35,15 +38,43 @@ const ContactForm = ({ onValidated, status, message }) => {
     });
   };
 
+  useEffect(() => {
+    if (!message) return;
+
+    if (status === "success") {
+      setData({
+        name: "",
+        email: "",
+        content: "",
+        subject: "",
+      });
+      toast.success("Thank you for subscribing!");
+    } else toast.error(message.toString());
+  }, [message, status]);
+
   const submit = () => {
+    if (!data.email && !emailValidation(data.email)) {
+      toast.error("Please enter a valid email!")
+      return;
+    }
+    if (!data.name) {
+      toast.error("Please enter a Name")
+      return;
+    }
+    if (!data.subject) {
+      toast.error("Please enter a subject")
+      return;
+    }
+    if (!data.content) {
+      toast.error("Please enter a message")
+      return;
+    }
     onValidated({
       EMAIL: data.email,
       MESSAGE: data.content,
       NAME: data.name,
       SUBJECT: data.subject,
     });
-
-    alert(message);
   };
   return (
     <>
@@ -87,6 +118,5 @@ const ContactForm = ({ onValidated, status, message }) => {
     </>
   );
 };
-
 
 export default ContactForm;

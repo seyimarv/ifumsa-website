@@ -69,7 +69,7 @@ const Wrapper = styled.div`
 const NavsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
 
   @media ${devices.tabport} {
     display: none;
@@ -99,7 +99,7 @@ const MobileNav = styled.div`
   @media ${devices.tabport} {
     transform: ${({ isMobileNav }) => (isMobileNav ? "translateY(0)" : "")};
   }
-  @media only screen and (min-width: 37.5em) {
+  @media only screen and (min-width: 56.25em) {
     display: none;
   }
 `;

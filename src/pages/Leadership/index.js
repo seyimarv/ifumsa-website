@@ -97,42 +97,6 @@ const Leadership = () => {
           className="text"
           align="center"
         >
-          Past Presidents and SRB Speakers
-          <div className="grid">
-            {array.map((data) => {
-              return (
-                <Member>
-                  <img alt="ima" src={President} key={data} />
-                  <Typograpghy
-                    size="2.1rem"
-                    lineHeight="2.6rem"
-                    fontWeight="700"
-                    mt="1.7rem"
-                  >
-                    Akinlolu Akinteye
-                  </Typograpghy>
-                  <Typograpghy
-                    mt="1.4rem"
-                    lineHeight="2rem"
-                    size="1.7rem"
-                    fontWeight="500"
-                  >
-                    President
-                  </Typograpghy>
-                </Member>
-              );
-            })}
-          </div>
-        </Typograpghy>
-      </GridContainer>
-      <GridContainer>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4.3rem"
-          className="text"
-          align="center"
-        >
           Executive Council
         </Typograpghy>
         <div className="grid">

@@ -4,7 +4,7 @@ import { colors } from "../../styles/colors";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import NotableAlumni1 from "../../Images/NotableAlumni.png";
 import { devices } from "../../styles/mediaQueries";
-import { Navigation, A11y } from "swiper";
+import  SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,6 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Container } from "../../styles/container";
 
+SwiperCore.use([Autoplay]);
 const data = [1, 2, 3, 4];
 const Wrapper = styled.div`
   padding: 10rem 0rem;
@@ -92,8 +93,11 @@ const ImageScroll = () => {
               spaceBetween={50}
               slidesPerView={1}
               navigation
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
             >
               {data.map((data) => {
                 return (
@@ -109,6 +113,7 @@ const ImageScroll = () => {
                         lineHeight="4rem"
                         style={{
                           marginBottom: "4.9rem",
+                          marginTop: "1rem",
                         }}
                         align="center"
                       >

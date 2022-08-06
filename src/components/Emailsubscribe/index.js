@@ -12,7 +12,6 @@ import { useEffect } from "react";
 const EmailSubscribe = ({ onValidated, status, message }) => {
   const [email, setEmail] = useState("");
 
-  console.log(email);
   useEffect(() => {
     if (!message) return;
 
@@ -24,9 +23,7 @@ const EmailSubscribe = ({ onValidated, status, message }) => {
 
   const submit = () => {
     if (!email && !emailValidation(email)) {
-      toast.error("Please enter a valid email!", {
-        position: toast.POSITION.TOP_LEFT,
-      });
+      toast.error("Please enter a valid email!");
     } else {
       onValidated({
         EMAIL: email,

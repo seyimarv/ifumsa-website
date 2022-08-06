@@ -158,6 +158,10 @@ const Section3 = styled.div`
     svg {
       height: 15rem;
       width: 15rem;
+      @media ${devices.phone} {
+        max-width: 10rem;
+        height: auto;
+      }
     }
   }
   .up {
@@ -231,23 +235,24 @@ const Home = () => {
               initial={{ opacity: 0 }}
             >
               <Typograpghy>
-                Obafemi Awolowo University Students’ Association, usually
-                abbreviated as IFUMSA is the umbrella body of the Medical
-                Students in the Obafemi Awolowo University. IFUMSA was founded
-                in September 1972, by the foundation students of the Faculty of
-                Health Sciences (now College of Health Sciences) which was
-                established May 8, 1972. The year 2022 makes it 50 years that
-                the association has been in existence. We are a vibrant student
-                body with over 700 members and an associated illustrious Alumni
-                Body.{" "}
+                The MEDICAL STUDENTS’ ASSOCIATION (IFUMSA) of the prestigious
+                Obafemi Awolowo University was established in 1972 as a group of
+                individuals admitted to study Medicine and Surgery in the
+                University of Ife(OAU) hence the name “Ife University Medical
+                Students Association” and the acronym IFUMSA. This year 2022
+                thus marks the 50th year of existence of the association.
                 <Collapsible buttonText="Read">
-                  The 44 seat IFUMSA Parliament, the leadership of the
-                  association, popularly known as the Student Representative
-                  Body (SRB) of IFUMSA, comprises;10 Executive Council members
-                  whose activities are coordinated by the President of the
-                  Association, 30 Students’ Representative Body (SRB) members
-                  and; 4 Ex-Officio members, is chaired by the Speaker of the
-                  House
+                  <br />
+                  As a conglomeration of tomorrow’s doctors to be trained in the
+                  ancient, traditional and historic town of Ife, IFUMSA has
+                  continually been an association to cater for the wellbeing of
+                  her community and members from the little resources garnered
+                  yearly from members.
+                  <br />
+                  <br />
+                  The association has watched herself grow from less than 200
+                  members in the ‘70s to over 700 members in recent times and
+                  over 15,000 alumni successfully fielded all over the world.
                 </Collapsible>
               </Typograpghy>
             </motion.div>
@@ -365,94 +370,7 @@ const Home = () => {
                     </>
                   </Typograpghy>
                 </Collapsible>
-                {/* <Typograpghy color={colors.white}>
-                  <strong>GOLDEN PRIDE OF IFUMSA </strong>
-                  <br />
-                  It does not take so long a time for the golden year to come.
-                  It is for a fact, an element of progressiveness to understand
-                  how long we have come, to appreciate the past and to welcome
-                  the future.
-                  <br />
-                  <br />
-                  Young students, who are now our fathers and mothers, pursuing
-                  the MBChB degree at the University of Ife (now Obafemi Awolowo
-                  University) established an association that projects their
-                  interest, represents their ideals and serve their purposes.
-                  That birthed the beginning of a very long but amazing journey.
-                  {morePresidentMessage && (
-                    <>
-                      <br />
-                      <br />
-                      Fifty years on and the ideals, purpose, hopes and
-                      interests of our founding fathers remain our golden aims
-                      and objectives. Our vision remains lucid and our mission
-                      is rivetted.
-                      <br />
-                      <br />
-                      As an association we have numerous activities, programs
-                      and projects that continue to ensure our greatness is
-                      preserved. We have for ourselves an enriched culture that
-                      is bathed with the values of unity, love, teamspirit and
-                      nobility. Our greatest treasures are the people both
-                      members and alumni who continue to contribute to our
-                      successes and progress all through the years. We pride
-                      ourselves as an association that is one among many and
-                      second to none, this mantra we have upheld for many years
-                      unshaken and without blemish.
-                      <br />
-                      <br />
-                      Our records speak for us. We thrive to ensure that our
-                      members get the most out of their medical education, that
-                      as a medical student you learn more than the medical
-                      rudiments but you also pick up skills that are profitable
-                      in the expanse of the world and that you have values that
-                      will continue to open doors. We create opportunities and
-                      enabling atmosphere for growth of passion,
-                      extra-curricular activities and also build skills needed
-                      both within and outside medicine. As a group of noble
-                      professionals in training, our core objectives of academic
-                      excellence continue to be our mandate while we also find
-                      time for recreational activities that loosen burden.
-                      <br />
-                      <br />
-                      Our alumni continue to be proud of what they left behind
-                      and seeing us thrive is always their joy as is evident by
-                      their continuous expression of satisfaction anytime we
-                      have them.
-                      <br />
-                      <br />
-                      As we have been existing for 50 Golden Years, the 50th
-                      anniversary calls for celebration. To celebrate our
-                      history, celebrate our achievements and also project for
-                      the future. Activities in this regard are centered around
-                      the power-packed 36th Health Week and the Mega Alumni
-                      Reunion Honours Day program.
-                      <br />
-                      <br />
-                      For the success of this 50th anniversary we are open to
-                      partnerships, sponsorships, recommendations and ideas to
-                      ensure that we create a lasting memory that is deserving
-                      of a golden year.
-                      <br />
-                      <br />I want to implore you all to identify with our
-                      anniversary programs as we look forward to achieving more
-                      and celebrating this great feat. Congratulations to us
-                      all!
-                    </>
-                  )}
-                </Typograpghy> */}
               </motion.div>
-              {/* <Button
-                isSecondary
-                style={{
-                  marginTop: "2rem",
-                }}
-                onClick={() => setMorePresidentMessage(!morePresidentMessage)}
-              >
-                {!morePresidentMessage ? <>Read more</> : <>Read less</>}
-
-                <Shine />
-              </Button> */}
             </div>
           </div>
         </Container>
@@ -480,14 +398,21 @@ const Home = () => {
                 Our Vision
               </Typograpghy>
               <Typograpghy color={colors.primary} align="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                ligula nibh, interdum non enim sit amet, iaculis aliquet nunc.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-                egestas ultrices. Vestibulum et neque id ex semper varius a sit
-                amet metus. Vivamus congue dolor eget aliquam hendrerit. Etiam
-                iaculis finibus egestas. Nam viverra urna quis odio efficitur
-                malesuada. Maecenas rhoncus enim eu scelerisque rutrum.
+                Our primary focus is to cater for the general welfare and
+                interest of all Medical Students of the Obafemi Awolowo
+                University, Ile-Ife as well as to contribute to the upliftment
+                of the health conditions and general welfare of the people by
+                rendering assistance in all community programs where Medical
+                Students can be of help. We have been able to achieve numerous
+                counts of this through our society alleviation programs,
+                rallies, summits, outreaches, symposia, lectures and social
+                events. Some of these are the Save Our Teachers Movement,
+                Depression talks, Rally against Female Genital Mutilation and
+                many more.
+                <br />
+                <br />
+                We not only do this to help the society, we do this to help the
+                doctor we are all going to become.
               </Typograpghy>
             </motion.div>
             <motion.div
@@ -507,14 +432,13 @@ const Home = () => {
                 Our Mission
               </Typograpghy>
               <Typograpghy color={colors.primary} align="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                ligula nibh, interdum non enim sit amet, iaculis aliquet nunc.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-                egestas ultrices. Vestibulum et neque id ex semper varius a sit
-                amet metus. Vivamus congue dolor eget aliquam hendrerit. Etiam
-                iaculis finibus egestas. Nam viverra urna quis odio efficitur
-                malesuada. Maecenas rhoncus enim eu scelerisque rutrum.
+                As an affiliate member of the Nigerian Medical Association (NMA)
+                through the Nigerian Medical Students’ Association (NiMSA) as
+                well as registered member of the International Federation of
+                Medical Students’ Associations (IFMSA) and the Federation Of
+                African Medical Students’ Association (FAMSA), we are committed
+                to taking the good service of Medicine around the globe without
+                any limit.
               </Typograpghy>
             </motion.div>
           </div>

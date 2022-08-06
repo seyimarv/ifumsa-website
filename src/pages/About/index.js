@@ -59,6 +59,11 @@ const Section2 = styled.div`
     svg {
       height: 15rem;
       width: 15rem;
+
+      @media ${devices.phone} {
+      width: 12rem;
+      height: 12rem;
+    }
     }
   }
   .up {
@@ -156,14 +161,20 @@ const About = () => {
             Our Vision
           </Typograpghy>
           <Typograpghy color={colors.primary} align="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit. Etiam iaculis finibus
-            egestas. Nam viverra urna quis odio efficitur malesuada. Maecenas
-            rhoncus enim eu scelerisque rutrum.
+            Our primary focus is to cater for the general welfare and interest
+            of all Medical Students of the Obafemi Awolowo University, Ile-Ife
+            as well as to contribute to the upliftment of the health conditions
+            and general welfare of the people by rendering assistance in all
+            community programs where Medical Students can be of help. We have
+            been able to achieve numerous counts of this through our society
+            alleviation programs, rallies, summits, outreaches, symposia,
+            lectures and social events. Some of these are the Save Our Teachers
+            Movement, Depression talks, Rally against Female Genital Mutilation
+            and many more.
+            <br />
+            <br />
+            We not only do this to help the society, we do this to help the
+            doctor we are all going to become.
           </Typograpghy>
           <Typograpghy
             color={colors.secondary}
@@ -177,14 +188,12 @@ const About = () => {
             Our Mission
           </Typograpghy>
           <Typograpghy color={colors.primary} align="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit. Etiam iaculis finibus
-            egestas. Nam viverra urna quis odio efficitur malesuada. Maecenas
-            rhoncus enim eu scelerisque rutrum.
+            As an affiliate member of the Nigerian Medical Association (NMA)
+            through the Nigerian Medical Students’ Association (NiMSA) as well
+            as registered member of the International Federation of Medical
+            Students’ Associations (IFMSA) and the Federation Of African Medical
+            Students’ Association (FAMSA), we are committed to taking the good
+            service of Medicine around the globe without any limit.
           </Typograpghy>
         </div>
         <div className="quote down">
