@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
-import ActivitiesImg1 from "../../Images/ActivitiesImg1.png";
 import ActivitiesImg2 from "../../Images/ActivitiesImg2.png";
 import ActivitiesImg3 from "../../Images/ActivitiesImg3.png";
 import ActivitiesImg4 from "../../Images/ActivitiesImg4.png";
