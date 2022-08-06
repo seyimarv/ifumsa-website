@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container as BootstrapContainer } from "react-bootstrap";
 import picture1 from "../../Images/Home-Image.png";
 import picture2 from "../../Images/Picture2.png";
@@ -6,15 +6,14 @@ import President from "../../Images/President.png";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import Typograpghy from "../../components/Typography/Typograpghy";
-import { Button } from "../../components/Button";
 import QuoteImage from "../../Images/Quote";
 import ImageScroll from "./ImageScroll";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { devices } from "../../styles/mediaQueries";
-import { Shine } from "../../components/Button/shine";
 import EmailSubscribe from "../../components/Emailsubscribe";
 import { motion } from "framer-motion";
 import { Container } from "../../styles/container";
+import Collapsible from "../../components/Collapsible";
 
 const {
   REACT_APP_MAILCHIMP_API,
@@ -191,8 +190,6 @@ const Section4 = styled.div`
 `;
 
 const Home = () => {
-  const [morePresidentMessage, setMorePresidentMessage] = useState(false);
-  const [readMoreAboutUs, setMoreAboutUs] = useState(false);
   const fade = {
     y: 0,
     opacity: 1,
@@ -243,29 +240,17 @@ const Home = () => {
                 the association has been in existence. We are a vibrant student
                 body with over 700 members and an associated illustrious Alumni
                 Body.{" "}
-                {readMoreAboutUs && (
-                  <>
-                    The 44 seat IFUMSA Parliament, the leadership of the
-                    association, popularly known as the Student Representative
-                    Body (SRB) of IFUMSA, comprises;10 Executive Council members
-                    whose activities are coordinated by the President of the
-                    Association, 30 Students’ Representative Body (SRB) members
-                    and; 4 Ex-Officio members, is chaired by the Speaker of the
-                    House
-                  </>
-                )}
+                <Collapsible buttonText="Read">
+                  The 44 seat IFUMSA Parliament, the leadership of the
+                  association, popularly known as the Student Representative
+                  Body (SRB) of IFUMSA, comprises;10 Executive Council members
+                  whose activities are coordinated by the President of the
+                  Association, 30 Students’ Representative Body (SRB) members
+                  and; 4 Ex-Officio members, is chaired by the Speaker of the
+                  House
+                </Collapsible>
               </Typograpghy>
             </motion.div>
-            <Button
-              isPrimary
-              style={{
-                marginTop: "4rem",
-              }}
-              onClick={() => setMoreAboutUs(!readMoreAboutUs)}
-            >
-              <>{!readMoreAboutUs ? <>Read more</> : <>Read less</>}</>
-              <Shine />
-            </Button>
           </div>
           <div>
             <Picture2 alt="ifumsa" src={picture2} />
@@ -302,6 +287,85 @@ const Home = () => {
                 initial={{ opacity: 0 }}
               >
                 <Typograpghy color={colors.white}>
+                  <strong>GOLDEN PRIDE OF IFUMSA </strong>
+                  <br />
+                  It does not take so long a time for the golden year to come.
+                  It is for a fact, an element of progressiveness to understand
+                  how long we have come, to appreciate the past and to welcome
+                  the future.
+                  <br />
+                  <br />
+                  Young students, who are now our fathers and mothers, pursuing
+                  the MBChB degree at the University of Ife (now Obafemi Awolowo
+                  University) established an association that projects their
+                  interest, represents their ideals and serve their purposes.
+                  That birthed the beginning of a very long but amazing journey.
+                </Typograpghy>
+                <Collapsible buttonText="Read">
+                  {" "}
+                  <Typograpghy color={colors.white}>
+                    <>
+                      <br />
+                      <br />
+                      Fifty years on and the ideals, purpose, hopes and
+                      interests of our founding fathers remain our golden aims
+                      and objectives. Our vision remains lucid and our mission
+                      is rivetted.
+                      <br />
+                      <br />
+                      As an association we have numerous activities, programs
+                      and projects that continue to ensure our greatness is
+                      preserved. We have for ourselves an enriched culture that
+                      is bathed with the values of unity, love, teamspirit and
+                      nobility. Our greatest treasures are the people both
+                      members and alumni who continue to contribute to our
+                      successes and progress all through the years. We pride
+                      ourselves as an association that is one among many and
+                      second to none, this mantra we have upheld for many years
+                      unshaken and without blemish.
+                      <br />
+                      <br />
+                      Our records speak for us. We thrive to ensure that our
+                      members get the most out of their medical education, that
+                      as a medical student you learn more than the medical
+                      rudiments but you also pick up skills that are profitable
+                      in the expanse of the world and that you have values that
+                      will continue to open doors. We create opportunities and
+                      enabling atmosphere for growth of passion,
+                      extra-curricular activities and also build skills needed
+                      both within and outside medicine. As a group of noble
+                      professionals in training, our core objectives of academic
+                      excellence continue to be our mandate while we also find
+                      time for recreational activities that loosen burden.
+                      <br />
+                      <br />
+                      Our alumni continue to be proud of what they left behind
+                      and seeing us thrive is always their joy as is evident by
+                      their continuous expression of satisfaction anytime we
+                      have them.
+                      <br />
+                      <br />
+                      As we have been existing for 50 Golden Years, the 50th
+                      anniversary calls for celebration. To celebrate our
+                      history, celebrate our achievements and also project for
+                      the future. Activities in this regard are centered around
+                      the power-packed 36th Health Week and the Mega Alumni
+                      Reunion Honours Day program.
+                      <br />
+                      <br />
+                      For the success of this 50th anniversary we are open to
+                      partnerships, sponsorships, recommendations and ideas to
+                      ensure that we create a lasting memory that is deserving
+                      of a golden year.
+                      <br />
+                      <br />I want to implore you all to identify with our
+                      anniversary programs as we look forward to achieving more
+                      and celebrating this great feat. Congratulations to us
+                      all!
+                    </>
+                  </Typograpghy>
+                </Collapsible>
+                {/* <Typograpghy color={colors.white}>
                   <strong>GOLDEN PRIDE OF IFUMSA </strong>
                   <br />
                   It does not take so long a time for the golden year to come.
@@ -376,9 +440,9 @@ const Home = () => {
                       all!
                     </>
                   )}
-                </Typograpghy>
+                </Typograpghy> */}
               </motion.div>
-              <Button
+              {/* <Button
                 isSecondary
                 style={{
                   marginTop: "2rem",
@@ -388,7 +452,7 @@ const Home = () => {
                 {!morePresidentMessage ? <>Read more</> : <>Read less</>}
 
                 <Shine />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </Container>
