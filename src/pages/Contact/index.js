@@ -9,6 +9,7 @@ import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import ContactForm from "./contactform";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import Image from "../../components/ImageComponent";
 
 const {
   REACT_APP_MAILCHIMP_API,
@@ -23,9 +24,10 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture = styled.img`
+const Picture = styled(Image)`
   height: auto;
   width: 100%;
+  min-height: 10rem;
 `;
 
 const Section1 = styled.div`
@@ -69,6 +71,10 @@ const Section2 = styled.div`
     }
   }
 
+  @media ${devices.phone} {
+    padding: 3rem 2rem;
+  }
+
   .form-left {
     display: grid;
     grid-template-columns: 1fr;
@@ -82,7 +88,6 @@ const Section2 = styled.div`
     margin-top: 2rem;
   }
 `;
-
 
 const Index = () => {
   return (
