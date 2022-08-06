@@ -14,6 +14,7 @@ import EmailSubscribe from "../../components/Emailsubscribe";
 import { motion } from "framer-motion";
 import { Container } from "../../styles/container";
 import Collapsible from "../../components/Collapsible";
+import Image from "../../components/ImageComponent";
 
 const {
   REACT_APP_MAILCHIMP_API,
@@ -27,18 +28,10 @@ const Wrapper = styled(BootstrapContainer)`
   margin: 0rem;
   overflow-x: hidden;
 `;
-const Picture1 = styled.img`
-  height: 100%;
+const Picture1 = styled(Image)`
+  min-height: 60rem;
   width: 100%;
   border-radius: 5px;
-  border-bottom: 1px solid ${colors.primary};
-`;
-const Picture1Wrapper = styled.div`
-  width: 96%;
-  min-height: 60rem;
-  margin: auto;
-  padding: 2rem 0rem;
-  border-bottom: 1px solid ${colors.primary};
   @media ${devices.tabport} {
     min-height: 40rem;
     padding: 1rem 0rem;
@@ -51,6 +44,12 @@ const Picture1Wrapper = styled.div`
   @media screen and (max-width: 200px) {
     min-height: 10rem;
   }
+`;
+const Picture1Wrapper = styled.div`
+  width: 96%;
+  margin: auto;
+  padding: 2rem 0rem;
+  border-bottom: 1px solid ${colors.primary};
 `;
 
 const Picture2 = styled.img`
@@ -206,7 +205,7 @@ const Home = () => {
     <Wrapper fluid>
       <Container>
         <Picture1Wrapper>
-          <Picture1 alt="ifumsa" src={picture1} />
+          <Picture1 alt="ifumsa" src={picture1} className="skeleton" />
         </Picture1Wrapper>
       </Container>
       <Container>
