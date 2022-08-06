@@ -98,6 +98,7 @@ const MobileNav = styled.div`
 
   @media ${devices.tabport} {
     transform: ${({ isMobileNav }) => (isMobileNav ? "translateY(0)" : "")};
+    visibility: ${({ isMobileNav }) => (isMobileNav ? "" : "hidden")};
   }
   @media only screen and (min-width: 56.25em) {
     display: none;
@@ -107,7 +108,19 @@ const SubWrapper = styled.div`
   background: ${colors.primary};
   .links:not(:last-child) {
     margin-right: 4rem;
+
+    @media ${devices.phone} {
+      margin-right: 1.8rem;
+    }
   }
+
+  @media ${devices.phone} {
+    .text {
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+  }
+
   > div {
     display: flex;
     align-items: center;
@@ -156,7 +169,7 @@ const Header = ({ isMobileNav, setIsMobileNav }) => {
   const node = useRef();
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  console.log(pathname)
+  console.log(pathname);
   useOnClickOutside(node, () => setIsMobileNav(false));
   const onToggleMobileNav = useCallback(() => {
     if (!isMobileNav) {
@@ -179,7 +192,13 @@ const Header = ({ isMobileNav, setIsMobileNav }) => {
             {NavsData.map(({ label, path }) => {
               return (
                 <Link to={path} key={path}>
-                  <Typograpghy   color={path !== pathname ? colors.primary : colors.secondary}>{label}</Typograpghy>
+                  <Typograpghy
+                    color={
+                      path !== pathname ? colors.primary : colors.secondary
+                    }
+                  >
+                    {label}
+                  </Typograpghy>
                 </Link>
               );
             })}
@@ -194,6 +213,7 @@ const Header = ({ isMobileNav, setIsMobileNav }) => {
               <Link to={path} key={path} className="links">
                 <Typograpghy
                   color={path !== pathname ? colors.white : colors.secondary}
+                  className="text"
                 >
                   {label}
                 </Typograpghy>

@@ -10,6 +10,9 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Input/Input";
 import { Shine } from "../../components/Button/shine";
 import Collapsible from "../../components/Collapsible";
+import { saveAs } from "file-saver";
+import ifumsaconstitution from "../../Images/IFUMSA-Constitution.pdf";
+import Image from "../../components/ImageComponent";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -17,9 +20,10 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture1 = styled.img`
+const Picture1 = styled(Image)`
   height: 100%;
   width: 100%;
+  min-height: 10rem;
 `;
 
 const Section1 = styled.div`
@@ -132,6 +136,10 @@ const Section4 = styled.div`
   }
 `;
 const About = () => {
+  function saveConstitution() {
+    saveAs(ifumsaconstitution, "ifumsaconstitution.pdf");
+  }
+
   return (
     <Wrapper fluid>
       <Section1>
@@ -295,7 +303,7 @@ const About = () => {
           </Collapsible>
         </Typograpghy>
         <div className="buttons">
-          <Button isGhost>
+          <Button isGhost onClick={saveConstitution}>
             Download Constitution <Shine />
           </Button>
         </div>

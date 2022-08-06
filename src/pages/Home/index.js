@@ -52,7 +52,7 @@ const Picture1Wrapper = styled.div`
   border-bottom: 1px solid ${colors.primary};
 `;
 
-const Picture2 = styled.img`
+const Picture2 = styled(Image)`
   height: auto;
   max-width: 38rem;
 

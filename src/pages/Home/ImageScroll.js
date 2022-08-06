@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import Typograpghy from "../../components/Typography/Typograpghy";
-import NotableAlumni1 from "../../Images/NotableAlumni.png";
 import { devices } from "../../styles/mediaQueries";
-import  SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
+import SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Adeyemo from "../../Images/Adeyemo.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,7 +16,14 @@ import "swiper/css/scrollbar";
 import { Container } from "../../styles/container";
 
 SwiperCore.use([Autoplay]);
-const data = [1, 2, 3, 4];
+const data = [
+  {
+    image: Adeyemo,
+    name: "Dr Akinmade Fisayo",
+    words:
+      "I count myself lucky to have been associated with IFUMSA both by being an Ife med student and also intentionally by being active in various roles during my time as a great Ife student. IFUMSA prepared me for leadership roles, human capital development, public speaking and most importantly understanding the relevance of being in a team. Seeing that the association is growing from strength to strength even years after my time is a testament to the great institutional values of IFUMSA",
+  },
+];
 const Wrapper = styled.div`
   padding: 10rem 0rem;
   background: ${colors.primary};
@@ -60,8 +67,13 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 30rem;
-  height: 30rem;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  margin: auto;
 `;
 const ImageWrapper = styled.div`
   width: 30rem;
@@ -93,7 +105,6 @@ const ImageScroll = () => {
               spaceBetween={50}
               slidesPerView={1}
               navigation
-              loop={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: true,
@@ -101,11 +112,11 @@ const ImageScroll = () => {
             >
               {data.map((data) => {
                 return (
-                  <SwiperSlide key={data}>
+                  <SwiperSlide key={data.name}>
                     {" "}
                     <div className="body">
                       <ImageWrapper>
-                        <Image src={NotableAlumni1} />
+                        <Image src={Adeyemo} />
                       </ImageWrapper>
                       <Typograpghy
                         color={colors.white}
@@ -117,19 +128,10 @@ const ImageScroll = () => {
                         }}
                         align="center"
                       >
-                        Dr. Lorem Ipsum
+                        {data.name}
                       </Typograpghy>
                       <Typograpghy color={colors.white} align="center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec ligula nibh, interdum non enim sit amet, iaculis
-                        aliquet nunc. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos.
-                        Aliquam sit amet ipsum ac velit egestas ultrices.
-                        Vestibulum et neque id ex semper varius a sit amet
-                        metus. Vivamus congue dolor eget aliquam hendrerit.
-                        Etiam iaculis finibus egestas. Nam viverra urna quis
-                        odio efficitur malesuada. Maecenas rhoncus enim eu
-                        scelerisque rutrum.
+                        {data.words}
                       </Typograpghy>
                     </div>
                   </SwiperSlide>

@@ -34,6 +34,7 @@ position: relative;
     width: 100%;
     z-index: 200;
     position: absolute;
+    border-radius: inherit;
   }
   img {
     height: 100%;

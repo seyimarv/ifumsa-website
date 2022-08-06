@@ -7,6 +7,7 @@ import styled from "styled-components";
 import AboutImage from "../../Images/about.png";
 import President from "../../Images/President.png";
 import { Council } from "./utils";
+import Image from "../../components/ImageComponent";
 
 const array = [1, 2, 3, 4, 5, 6];
 
@@ -16,7 +17,7 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture1 = styled.img`
+const Picture1 = styled(Image)`
   min-height: 10rem;
   width: 100%;
 `;
@@ -68,6 +69,10 @@ const GridContainer = styled.div`
 
 const Member = styled.div`
   width: 28rem;
+
+  .image {
+    min-height: 34.9rem;
+  }
   img {
     width: 100%;
     height: auto;
@@ -103,7 +108,12 @@ const Leadership = () => {
           {Council.map((data) => {
             return (
               <Member>
-                <img alt="ima" src={data.image} key={data.name} />
+                <Image
+                  alt="ima"
+                  src={data.image}
+                  key={data.name}
+                  className="image"
+                />
                 <Typograpghy
                   size="2.1rem"
                   lineHeight="2.6rem"
