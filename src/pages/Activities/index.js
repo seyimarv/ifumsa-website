@@ -3,11 +3,6 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
-import ActivitiesImg2 from "../../Images/ActivitiesImg2.png";
-import ActivitiesImg3 from "../../Images/ActivitiesImg3.png";
-import ActivitiesImg4 from "../../Images/ActivitiesImg4.png";
-import ActivitiesImg5 from "../../Images/ActivitiesImg5.png";
-import ActivitiesImg9 from "../../Images/ActivitiesImg9.png";
 import { Container as BaseContainer } from "../../styles/container";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
@@ -296,7 +291,7 @@ function index() {
             </Button>
           </div>
         </EachSection>
-        <EachSection>
+        {/* <EachSection>
           <Typograpghy
             color={colors.secondary}
             size="3.6rem"
@@ -334,7 +329,7 @@ function index() {
               View More {">>"} <Shine />
             </Button>
           </div>
-        </EachSection>
+        </EachSection> */}
         <EachSection>
           <Typograpghy
             color={colors.secondary}
