@@ -28,17 +28,17 @@ import Academic2 from "../../Images/Academic2.jpg";
 import Academic3 from "../../Images/Academic3.jpg";
 import Academic4 from "../../Images/Academic4.jpg";
 import Academic5 from "../../Images/Academic5.jpg";
-import Social1 from "../../Images/Social1.jpg";
 import Social2 from "../../Images/Social2.jpg";
 import Social3 from "../../Images/Social3.jpg";
 import Social4 from "../../Images/Social4.jpg";
 import Social5 from "../../Images/social5.jpg";
 import Image from "../../components/ImageComponent";
 import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg";
-import HealthWeek2 from "../../Images/healthweek2.jpg";
 import Healthweek3 from "../../Images/Healthweekaward.jpg";
-import HealthWeek4 from "../../Images/Healthweek4.jpg";
-import HeathWeek5 from "../../Images/Healthweek5.jpg";
+import HealthWeek7 from "../../Images/healthweek7.jpg"
+import healthweek8 from "../../Images/healthweek8.jpg"
+import Healthweek9 from "../../Images/Max.png"
+import PregnantWoman from "../../Images/PregnantWoman.png"
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -308,10 +308,10 @@ function index() {
           <div className="image-container">
             <ActivityPictures src={Healthweek3} />
             <div className="grid-right">
-              <ActivityPictures src={HealthWeek2} />
-              <ActivityPictures src={HealthWeek4} />
-              <ActivityPictures src={Social1} />
-              <ActivityPictures src={HeathWeek5} />
+              <ActivityPictures src={HealthWeek7} />
+              <ActivityPictures src={healthweek8} />
+              <ActivityPictures src={PregnantWoman} />
+              <ActivityPictures src={Healthweek9} />
             </div>
           </div>
           <Typograpghy

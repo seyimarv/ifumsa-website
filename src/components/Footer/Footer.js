@@ -160,7 +160,7 @@ const Footer = () => {
                 </FooterTypo>
                 <FooterTypo color={colors.white} size="2.3rem">
                   <PhoneCall />
-                  +234 0813 XXX XX09
+                  +2347033636990, +2349076390962 
                 </FooterTypo>
               </div>
             </ContactUs>

@@ -170,6 +170,26 @@ const About = () => {
             Our Vision
           </Typograpghy>
           <Typograpghy color={colors.primary} align="center">
+            As an affiliate member of the Nigerian Medical Association (NMA)
+            through the Nigerian Medical Students’ Association (NiMSA) as well
+            as registered member of the International Federation of Medical
+            Students’ Associations (IFMSA) and the Federation Of African Medical
+            Students’ Association (FAMSA), we are committed to taking the good
+            service of Medicine around the globe without any limit.
+          </Typograpghy>
+
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            style={{
+              margin: "3.6rem",
+            }}
+            align="center"
+          >
+            Our Mission
+          </Typograpghy>
+          <Typograpghy color={colors.primary} align="center">
             Our primary focus is to cater for the general welfare and interest
             of all Medical Students of the Obafemi Awolowo University, Ile-Ife
             as well as to contribute to the upliftment of the health conditions
@@ -184,25 +204,6 @@ const About = () => {
             <br />
             We not only do this to help the society, we do this to help the
             doctor we are all going to become.
-          </Typograpghy>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            style={{
-              margin: "3.6rem",
-            }}
-            align="center"
-          >
-            Our Mission
-          </Typograpghy>
-          <Typograpghy color={colors.primary} align="center">
-            As an affiliate member of the Nigerian Medical Association (NMA)
-            through the Nigerian Medical Students’ Association (NiMSA) as well
-            as registered member of the International Federation of Medical
-            Students’ Associations (IFMSA) and the Federation Of African Medical
-            Students’ Association (FAMSA), we are committed to taking the good
-            service of Medicine around the globe without any limit.
           </Typograpghy>
         </div>
         <div className="quote down">
