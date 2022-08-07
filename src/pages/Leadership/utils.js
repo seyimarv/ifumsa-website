@@ -1,13 +1,13 @@
-import President from '../../Images/President.png'
-import Shittu from '../../Images/Shitttu.png'
-import Ebenezer from '../../Images/Ebenezer.png'
-import Miracle from '../../Images/Miracle.png'
-import Dumomi from '../../Images/Dumomi.png'
-import Victoria from '../../Images/Victoria.png'
-import Aminu from '../../Images/Aminu.png'
-import Badru from '../../Images/Badru.png'
-import Evelyn from '../../Images/Evelyn.png'
-import Dolapo from '../../Images/Idowu.png'
+import President from '../../Images/Lolu.jpg'
+import Shittu from '../../Images/Shittu.jpg'
+import Ebenezer from '../../Images/Ebenezer.jpg'
+import Miracle from '../../Images/Miracle.jpg'
+import Dumomi from '../../Images/Dumomi.jpg'
+import Victoria from '../../Images/Victoriq.jpg'
+import Aminu from '../../Images/Aminu.jpg'
+import Badru from '../../Images/Badru.jpg'
+import Evelyn from '../../Images/Evelyn.jpg'
+import Dolapo from '../../Images/Dolapo.jpg'
 
 export const Council = [
     {

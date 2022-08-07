@@ -26,4 +26,4 @@ function index({location, zoomLevel}) {
   )
 }
 
-export default index
+export default index;

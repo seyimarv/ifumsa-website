@@ -9,6 +9,10 @@ import QuoteImage from "../../Images/Quote";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input/Input";
 import { Shine } from "../../components/Button/shine";
+import Collapsible from "../../components/Collapsible";
+import { saveAs } from "file-saver";
+import ifumsaconstitution from "../../Images/IFUMSA-Constitution.pdf";
+import Image from "../../components/ImageComponent";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -16,9 +20,10 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture1 = styled.img`
+const Picture1 = styled(Image)`
   height: 100%;
   width: 100%;
+  min-height: 10rem;
 `;
 
 const Section1 = styled.div`
@@ -59,6 +64,11 @@ const Section2 = styled.div`
     svg {
       height: 15rem;
       width: 15rem;
+
+      @media ${devices.phone} {
+        width: 12rem;
+        height: 12rem;
+      }
     }
   }
   .up {
@@ -81,9 +91,9 @@ const Section3 = styled.div`
     padding: 10rem 4rem;
   }
   .buttons {
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
-    width: 70%;
+    width: 100%;
     margin: 0px auto;
     margin-top: 4rem;
 
@@ -126,6 +136,10 @@ const Section4 = styled.div`
   }
 `;
 const About = () => {
+  function saveConstitution() {
+    saveAs(ifumsaconstitution, "ifumsaconstitution.pdf");
+  }
+
   return (
     <Wrapper fluid>
       <Section1>
@@ -156,14 +170,20 @@ const About = () => {
             Our Vision
           </Typograpghy>
           <Typograpghy color={colors.primary} align="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit. Etiam iaculis finibus
-            egestas. Nam viverra urna quis odio efficitur malesuada. Maecenas
-            rhoncus enim eu scelerisque rutrum.
+            Our primary focus is to cater for the general welfare and interest
+            of all Medical Students of the Obafemi Awolowo University, Ile-Ife
+            as well as to contribute to the upliftment of the health conditions
+            and general welfare of the people by rendering assistance in all
+            community programs where Medical Students can be of help. We have
+            been able to achieve numerous counts of this through our society
+            alleviation programs, rallies, summits, outreaches, symposia,
+            lectures and social events. Some of these are the Save Our Teachers
+            Movement, Depression talks, Rally against Female Genital Mutilation
+            and many more.
+            <br />
+            <br />
+            We not only do this to help the society, we do this to help the
+            doctor we are all going to become.
           </Typograpghy>
           <Typograpghy
             color={colors.secondary}
@@ -177,14 +197,12 @@ const About = () => {
             Our Mission
           </Typograpghy>
           <Typograpghy color={colors.primary} align="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit. Etiam iaculis finibus
-            egestas. Nam viverra urna quis odio efficitur malesuada. Maecenas
-            rhoncus enim eu scelerisque rutrum.
+            As an affiliate member of the Nigerian Medical Association (NMA)
+            through the Nigerian Medical Students’ Association (NiMSA) as well
+            as registered member of the International Federation of Medical
+            Students’ Associations (IFMSA) and the Federation Of African Medical
+            Students’ Association (FAMSA), we are committed to taking the good
+            service of Medicine around the globe without any limit.
           </Typograpghy>
         </div>
         <div className="quote down">
@@ -204,25 +222,88 @@ const About = () => {
           Brief History of IFUMSA
         </Typograpghy>
         <Typograpghy color={colors.white} align="center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra eget
-          dui pretium semper est quis. At cursus scelerisque mauris diam sit.
-          Vel odio sit nisi et pulvinar et ut. Nisl cras vel et vel facilisis
-          sed ridiculus nisi, diam. Elementum scelerisque in tristique nunc
-          convallis molestie habitasse habitasse. Egestas convallis et sed
-          semper nisi ac quam amet. Ligula eget pretium egestas vivamus ut nisi
-          enim scelerisque diam. Magnis magna sodales a non. Porta viverra nunc,
-          <br /> <br /> odio magna ut turpis neque orci amet. Turpis enim
-          vivamus netus dictum. Quis ac aliquet gravida et condimentum. Rhoncus
-          mattis purus varius quam sit vel aenean. Sollicitudin fames facilisis
-          viverra feugiat. Vulputate mattis sit curabitur erat semper purus.
-          Quam sed dolor, nec eu sollicitudin at. Arcu posuere mattis sed rutrum
-          arcu elit leo, mauris
+          IFUMSA is the medical students association for the Obafemi Awolowo
+          University chapter. Created in September 1972 by the foundation
+          students of the Faculty of health sciences [now college of health
+          sciences] which was established May 8,1972. IFUMSA was created in a
+          bid to harness the full potential of medical students and run a body
+          that aims at developing students’ potential for creativity,
+          leadership, entrepreneurship, diplomacy and more.
+          <br />
+          <br />
+          In the 50 years of the existence of IFUMSA the association has seen a
+          lot of remarkable events and people. The second inaugurated President
+          of IFUMSA Professor Adetokunbo Fabamwo set a standard for the
+          association as they created the system and organ on which IFUMSA
+          functions till today. Currently IFUMSA has 5 organs, over 700 members
+          and a 44-seat IFUMSA parliament headed by the speaker of the house,
+          whose function is to make decisions concerning the smooth running of
+          the association in accordance with the constitution.
+          <Collapsible buttonText="Read">
+            <br />
+            <br />
+            This association has witnessed 43 presidents who have left
+            outstanding marks in the history of the association. Dr. Akinola
+            Beloved, the 42nd President, started the IFUMSA entrepreneurship and
+            economic summit in 2020. The second and first physical
+            Entrepreneurship summit was held in February 2022 during the 43rd
+            President of IFUMSA’s tenure, Dr. ‘Lolu Akinteye. This event was
+            graced with phenomenal trailblazers in the medicine, technology and
+            finance sectors. The event was graced by Barr. Jimoh Ibrahim, Dr.
+            Itunu Akinware, Mr. Babatunde Akin- Moses, Mr. Joshua Koya amongst
+            many others.
+            <br />
+            <br />
+            Over the years, IFUMSA has been known to host multiple events and
+            seminars. Outstanding among them are the IFUMSA Health week,
+            Biennial Honors day and the Doctor plus series. The health week is
+            the annual grand finale of a parliamentary year. It is a week to
+            establish our contribution to the health sector and to further
+            reinvigorate our identity as medical students.
+            <br />
+            <br />
+            The last health week that was held in 2021 was one for the books. It
+            was graced by noteworthy people in the likes of the Vice chancellor,
+            Osun state commissioner for Health, Osun state commissioner for
+            women affairs, Aproko Doctor, BNXN, NiMSA president amongst many
+            others. The Health week was filled with so many activities from the
+            rally, to the Articine capped with the health week dinner.
+            <br />
+            <br />
+            We have grown our presence across various platforms like Instagram,
+            Twitter, youtube and LinkedIn. We have also been featured in various
+            articles and have received numerous recognition.
+            <br />
+            <br />
+            IFUMSA has received multiple awards for our contribution to the
+            health sector and excellence in various feats. Some of the
+            remarkable ones are the Dokita Quiz, Ibadan, the Ojoawo Quiz,
+            Ilorin. In 2021, IFUMSA won the award for best event held in Ife for
+            our Health week.
+            <br />
+            <br />
+            IFUMSA can not run without some particular set of people making sure
+            that all the activities and duties are carried out properly. These
+            posts are filled in every parliamentary year with each post having
+            its own guidelines on what is expected of them as stated in the
+            constitution. Posts like that of the General Secretary, PRO,
+            Treasurer, Financial Secretary and the likes are filled by electing
+            the candidates through a free and fair democratic election.
+            <br />
+            <br />
+            These awesome candidates that have occupied these positions in
+            IFUMSA have over the years made lasting impacts in their tenures.
+            <br />
+            <br />
+            IFUMSA is a platform where young talented and brilliant doctors are
+            raised and groomed in entrepreneurship, discipline, creativity and
+            core skills are impacted into them. An association where young
+            individuals are groomed to handle real life tasks. IFUMSA is indeed
+            the place to be!
+          </Collapsible>
         </Typograpghy>
         <div className="buttons">
-          <Button isSecondary>
-            Read more {">>"} <Shine />
-          </Button>
-          <Button isGhost>
+          <Button isGhost onClick={saveConstitution}>
             Download Constitution <Shine />
           </Button>
         </div>

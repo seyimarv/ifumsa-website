@@ -7,6 +7,7 @@ import styled from "styled-components";
 import AboutImage from "../../Images/about.png";
 import President from "../../Images/President.png";
 import { Council } from "./utils";
+import Image from "../../components/ImageComponent";
 
 const array = [1, 2, 3, 4, 5, 6];
 
@@ -16,8 +17,8 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture1 = styled.img`
-  height: 100%;
+const Picture1 = styled(Image)`
+  min-height: 10rem;
   width: 100%;
 `;
 
@@ -68,10 +69,18 @@ const GridContainer = styled.div`
 
 const Member = styled.div`
   width: 28rem;
+
+  .image {
+    min-height: 34.9rem;
+  }
   img {
     width: 100%;
-    height: 35rem;
+    height: auto;
     border-radius: 1.1rem;
+  }
+  @media ${devices.phone} {
+     width: 100%;
+     margin-bottom: 3rem;
   }
 `;
 
@@ -97,49 +106,18 @@ const Leadership = () => {
           className="text"
           align="center"
         >
-          Past Presidents and SRB Speakers
-          <div className="grid">
-            {array.map((data) => {
-              return (
-                <Member>
-                  <img alt="ima" src={President} key={data} />
-                  <Typograpghy
-                    size="2.1rem"
-                    lineHeight="2.6rem"
-                    fontWeight="700"
-                    mt="1.7rem"
-                  >
-                    Akinlolu Akinteye
-                  </Typograpghy>
-                  <Typograpghy
-                    mt="1.4rem"
-                    lineHeight="2rem"
-                    size="1.7rem"
-                    fontWeight="500"
-                  >
-                    President
-                  </Typograpghy>
-                </Member>
-              );
-            })}
-          </div>
-        </Typograpghy>
-      </GridContainer>
-      <GridContainer>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4.3rem"
-          className="text"
-          align="center"
-        >
           Executive Council
         </Typograpghy>
         <div className="grid">
           {Council.map((data) => {
             return (
               <Member>
-                <img alt="ima" src={data.image} key={data.name} />
+                <Image
+                  alt="ima"
+                  src={data.image}
+                  key={data.name}
+                  className="image"
+                />
                 <Typograpghy
                   size="2.1rem"
                   lineHeight="2.6rem"

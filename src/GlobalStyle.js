@@ -15,11 +15,6 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
-
-    @media ${devices.phone} { // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-    }
-
     @media ${devices.tabport} { // width < 900?
         font-size: 50%; //1 rem = 8px, 8/16 = 50%
     }
@@ -29,6 +24,10 @@ html {
     }
 
 
+
+    @media ${devices.phone} { // width < 1200?
+        font-size: 55%; //1 rem = 9px, 9/16 = 50%
+    }
 }
 
 body {

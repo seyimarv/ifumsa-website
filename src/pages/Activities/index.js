@@ -3,20 +3,42 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
-import ActivitiesImg1 from "../../Images/ActivitiesImg1.png";
-import ActivitiesImg2 from "../../Images/ActivitiesImg2.png";
-import ActivitiesImg3 from "../../Images/ActivitiesImg3.png";
-import ActivitiesImg4 from "../../Images/ActivitiesImg4.png";
-import ActivitiesImg5 from "../../Images/ActivitiesImg5.png";
-import ActivitiesImg6 from "../../Images/ActivitiesImg6.png";
-import ActivitiesImg7 from "../../Images/ActivitiesImg7.png";
-import ActivitiesImg8 from "../../Images/ActivitiesImg8.png";
-import ActivitiesImg9 from "../../Images/ActivitiesImg9.png";
-import ActivitiesImg10 from "../../Images/ActivitiesImg10.png";
+import { Container as BaseContainer } from "../../styles/container";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import { Button } from "../../components/Button";
 import { Shine } from "../../components/Button/shine";
+import EECONE from "../../Images/one.jpg";
+import EECTWO from "../../Images/two.jpg";
+import EECFOUR from "../../Images/Four.jpg";
+import EECFIVE from "../../Images/Five.jpg";
+import EECSIX from "../../Images/EECSIX.jpg";
+import Outreach1 from "../../Images/outhreach1.jpg";
+import Outreach2 from "../../Images/outreach2.jpg";
+import Outreach3 from "../../Images/outreach3.jpg";
+import Outreach4 from "../../Images/outreach4.jpg";
+import Outreach5 from "../../Images/outreach5.jpg";
+import Sport1 from "../../Images/sport1.jpg";
+import Sport2 from "../../Images/sport2.jpg";
+import Sport3 from "../../Images/sport3.jpg";
+import Sport4 from "../../Images/sport4.jpg";
+import Sport5 from "../../Images/sport5.jpg";
+import Academic1 from "../../Images/Academic1.jpg";
+import Academic2 from "../../Images/Academic2.jpg";
+import Academic3 from "../../Images/Academic3.jpg";
+import Academic4 from "../../Images/Academic4.jpg";
+import Academic5 from "../../Images/Academic5.jpg";
+import Social1 from "../../Images/Social1.jpg";
+import Social2 from "../../Images/Social2.jpg";
+import Social3 from "../../Images/Social3.jpg";
+import Social4 from "../../Images/Social4.jpg";
+import Social5 from "../../Images/social5.jpg";
+import Image from "../../components/ImageComponent";
+import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg";
+import HealthWeek2 from "../../Images/healthweek2.jpg";
+import Healthweek3 from "../../Images/Healthweekaward.jpg";
+import HealthWeek4 from "../../Images/Healthweek4.jpg";
+import HeathWeek5 from "../../Images/Healthweek5.jpg";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -24,9 +46,18 @@ const Wrapper = styled(Container)`
   overflow-x: hidden;
 `;
 
-const Picture = styled.img`
+const Picture = styled(Image)`
+  min-height: 10rem;
+  width: 100%;
+`;
+
+const ActivityPictures = styled(Image)`
   height: 100%;
   width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  layout: fill;
+  max-height: 68rem;
 `;
 
 const Section1 = styled.div`
@@ -65,6 +96,10 @@ const EachSection = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 1rem;
+    min-height: 63rem;
+    @media ${devices.tabport} {
+      min-height: 50rem;
+    }
 
     @media ${devices.phone} {
       display: grid;
@@ -102,240 +137,242 @@ function index() {
           Our Activities
         </Typograpghy>
       </Section1>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Social Activities
-        </Typograpghy>
+      <BaseContainer>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Social Activities
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg1} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={BujuHealthWeek} />
+            <div className="grid-right">
+              <ActivityPictures src={Social2} />
+              <ActivityPictures src={Social3} />
+              <ActivityPictures src={Social4} />
+              <ActivityPictures src={Social5} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Sports Activities
-        </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Sports Activities
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg6} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={Sport5} />
+            <div className="grid-right">
+              <ActivityPictures src={Sport1} />
+              <ActivityPictures src={Sport2} />
+              <ActivityPictures src={Sport3} />
+              <ActivityPictures src={Sport4} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Outreaches
-        </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Outreaches
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg7} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={Outreach2} />
+            <div className="grid-right">
+              <ActivityPictures src={Outreach1} />
+              <ActivityPictures src={Outreach3} />
+              <ActivityPictures src={Outreach4} />
+              <ActivityPictures src={Outreach5} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Academic Activities
-        </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Academic Activities
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg8} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={Academic2} />
+            <div className="grid-right">
+              <ActivityPictures src={Academic5} />
+              <ActivityPictures src={Academic3} />
+              <ActivityPictures src={Academic4} />
+              <ActivityPictures src={Academic1} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Health Week
-        </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Health Week
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg9} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={Healthweek3} />
+            <div className="grid-right">
+              <ActivityPictures src={HealthWeek2} />
+              <ActivityPictures src={HealthWeek4} />
+              <ActivityPictures src={Social1} />
+              <ActivityPictures src={HeathWeek5} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
-      <EachSection>
-        <Typograpghy
-          color={colors.secondary}
-          size="3.6rem"
-          lineHeight="4rem"
-          align="center"
-          style={{ padding: "4rem 0 2rem" }}
-        >
-          Entrepreneurship {"&"} Economic
-        </Typograpghy>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            Entrepreneurship {"&"} Economic
+          </Typograpghy>
 
-        <div className="image-container">
-          <Picture src={ActivitiesImg10} />
-          <div className="grid-right">
-            <Picture src={ActivitiesImg2} />
-            <Picture src={ActivitiesImg3} />
-            <Picture src={ActivitiesImg4} />
-            <Picture src={ActivitiesImg5} />
+          <div className="image-container">
+            <ActivityPictures src={EECONE} />
+            <div className="grid-right">
+              <ActivityPictures src={EECFOUR} />
+              <ActivityPictures src={EECSIX} />
+              <ActivityPictures src={EECTWO} />
+              <ActivityPictures src={EECFIVE} />
+            </div>
           </div>
-        </div>
-        <Typograpghy
-          align="left"
-          color={colors.primary}
-          lineHeight="3.6rem"
-          style={{ paddingTop: "4rem" }}
-        >
-          <span>IFUMSA Alumni Relations Committee</span>, consectetur adipiscing
-          elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
-          nunc. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
-          egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
-          metus. Vivamus congue dolor e
-        </Typograpghy>
-        <div className="button">
-          <Button isPrimary>
-            View More {">>"} <Shine />
-          </Button>
-        </div>
-      </EachSection>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3.6rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor e
+          </Typograpghy>
+          <div className="button">
+            <Button isPrimary>
+              View More {">>"} <Shine />
+            </Button>
+          </div>
+        </EachSection>
+      </BaseContainer>
     </Wrapper>
   );
 }

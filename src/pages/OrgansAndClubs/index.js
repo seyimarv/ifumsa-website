@@ -41,7 +41,11 @@ const Section1 = styled.div`
 `;
 
 const Picture = styled.img`
+// <<<<<<< HEAD
   height: auto;
+// =======
+  min-height: 10rem;
+// >>>>>>> 50673ca8d9a3de2949f5afc10b3e24e79e0d018b
   width: 100%;
 `;
 
@@ -121,6 +125,7 @@ function OrgansAndClubs() {
             size="1.5rem"
             style={{ paddingTop: "2rem" }}
           >
+{/* < HEAD */}
             <span>IFUMSA Alumni Relations Committee</span> of the Medical
             Students' Association, Obafemi Awolowo University, Ile-Ife (IFUMSA),
             formerly known as Ife University Medical Students' Association, is
@@ -129,6 +134,15 @@ function OrgansAndClubs() {
             based on the vision of our forebears to keep the alumni abreast and
             engaged in the progress of the association. Thus, the committee
             focuses on bridging the gap between alumni and current members.
+=======
+            <span>IFUMSA Alumni Relations Committee</span>, consectetur
+            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
+            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
+            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
+            semper varius a sit amet metus. Vivamus congue dolor eget aliquam
+            hendrerit.
+{/* >>>>>>> 50673ca8d9a3de2949f5afc10b3e24e79e0d018b */}
           </Typograpghy>
           <Typograpghy
             align="left"
@@ -137,6 +151,7 @@ function OrgansAndClubs() {
             size="1.5rem"
             style={{ paddingTop: "2rem" }}
           >
+{/* <<<<<<< HEAD */}
             This committee is responsible for organizing the Mega Alumni
             Reunion, among other alumni-related events. Other activities of the
             committee include: database collection of alumni, building a broad
@@ -158,6 +173,14 @@ function OrgansAndClubs() {
             Adegbehingbe, Immediate Past Dean of the Faculty of Clinical
             Sciences, O.A.U.; and Dr. Wale Okediran, a former member of the
             Federal House of Representatives.
+=======
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+{/* >>>>>>> 50673ca8d9a3de2949f5afc10b3e24e79e0d018b */}
           </Typograpghy>
           <div className="button">
             <Button isPrimary>
@@ -234,12 +257,21 @@ function OrgansAndClubs() {
             size="1.5rem"
             style={{ paddingTop: "2rem" }}
           >
+{/* <<<<<<< HEAD */}
             <span>IFUMSA Health Awareness Club</span> was established in 2012 as
             an organ of IFUMSA. The club was founded based on the vision of
             creating health awareness among the populace and to be the most
             vocal and visible platform for health awareness in Osun State. Thus,
             the club uses dynamic, strategic and innovative approaches to keep
             people informed about their health and all that pertains to it.
+=======
+            <span>IFUMSA Health Awareness Club</span>, consectetur adipiscing
+            elit. Donec ligula nibh, interdum non enim sit amet, iaculis aliquet
+            nunc. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Aliquam sit amet ipsum ac velit
+            egestas ultrices. Vestibulum et neque id ex semper varius a sit amet
+            metus. Vivamus congue dolor eget aliquam hendrerit.
+{/* >>>>>>> 50673ca8d9a3de2949f5afc10b3e24e79e0d018b */}
           </Typograpghy>
           <Typograpghy
             align="left"
@@ -248,6 +280,7 @@ function OrgansAndClubs() {
             size="1.5rem"
             style={{ paddingTop: "2rem" }}
           >
+{/* <<<<<<< HEAD */}
             This club is responsible for acquiring valid information about
             health through research and educating our community on such
             health-related issues. Other activities of the club include:
@@ -270,6 +303,14 @@ function OrgansAndClubs() {
             Community Health Physician, College of Health Sciences, Obafemi
             Awolowo University, Dr.(Mrs) Mapayi, Consultant psychiatrist,
             College of Health Sciences, O.A.U.
+=======
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
+            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
+            Vivamus congue dolor eget aliquam hendrerit.
+{/* >>>>>>> 50673ca8d9a3de2949f5afc10b3e24e79e0d018b */}
           </Typograpghy>
           <div className="button">
             <Button isPrimary>

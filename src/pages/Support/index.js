@@ -19,7 +19,7 @@ const Wrapper = styled(Container)`
 
 const Support = () => {
   return (
-    <Wrapper>
+    <Wrapper fluid>
       <Typograpghy
         color={colors.secondary}
         size="3.6rem"
