@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import styled from "styled-components";
@@ -8,16 +8,24 @@ const Image = ({ src, alt, ...props }) => {
   const handleImageLoaded = useCallback(() => {
     setIsLoaded(true);
   }, []);
+  const ref = useRef();
+
+  useEffect(() => {
+    if (ref.current && ref.current.complete) {
+      handleImageLoaded();
+    }
+  });
   return (
     <Wrapper {...props}>
-      {!isLoaded && <Skeleton className="skeleton"/>}
+      {!isLoaded && <Skeleton className="skeleton" />}
       <img
         src={src}
         alt={alt}
+        ref={ref}
         onLoad={handleImageLoaded}
         loading="lazy"
         style={{
-          visibility: !isLoaded && "hidden"
+          visibility: !isLoaded && "hidden",
         }}
       />
     </Wrapper>
@@ -27,7 +35,7 @@ const Image = ({ src, alt, ...props }) => {
 export default Image;
 
 const Wrapper = styled.div`
-position: relative;
+  position: relative;
   .skeleton {
     height: 100%;
     min-height: 100%;
