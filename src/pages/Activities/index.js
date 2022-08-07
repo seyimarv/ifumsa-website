@@ -36,7 +36,7 @@ import Social5 from "../../Images/social5.jpg";
 import Image from "../../components/ImageComponent";
 import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg";
 import HealthWeek2 from "../../Images/healthweek2.jpg";
-import Healthweek3 from "../../Images/Healthweek3.JPG";
+import Healthweek3 from "../../Images/Healthweekaward.jpg";
 import HealthWeek4 from "../../Images/Healthweek4.jpg";
 import HeathWeek5 from "../../Images/Healthweek5.jpg";
 
@@ -106,7 +106,6 @@ const EachSection = styled.div`
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 15px;
-      min-height: auto;
     }
   }
 
