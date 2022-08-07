@@ -78,6 +78,10 @@ const Member = styled.div`
     height: auto;
     border-radius: 1.1rem;
   }
+  @media ${devices.phone} {
+     width: 100%;
+     margin-bottom: 3rem;
+  }
 `;
 
 const Leadership = () => {

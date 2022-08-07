@@ -34,6 +34,11 @@ import Social3 from "../../Images/Social3.jpg";
 import Social4 from "../../Images/Social4.jpg";
 import Social5 from "../../Images/social5.jpg";
 import Image from "../../components/ImageComponent";
+import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg"
+import HealthWeek2 from "../../Images/healthweek2.jpg"
+import Healthweek3 from "../../Images/Healthweek3.JPG"
+import HealthWeek4 from "../../Images/Healthweek4.jpg"
+import HeathWeek5 from "../../Images/Healthweek5.jpg"
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -52,6 +57,7 @@ const ActivityPictures = styled(Image)`
   border-radius: 10px;
   object-fit: cover;
   layout: fill;
+  max-height: 68rem;
 `;
 
 const Section1 = styled.div`
@@ -141,7 +147,7 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <ActivityPictures src={Social1} />
+            <ActivityPictures src={BujuHealthWeek} />
             <div className="grid-right">
               <ActivityPictures src={Social2} />
               <ActivityPictures src={Social3} />
@@ -285,7 +291,7 @@ function index() {
             </Button>
           </div>
         </EachSection>
-        {/* <EachSection>
+        <EachSection>
           <Typograpghy
             color={colors.secondary}
             size="3.6rem"
@@ -297,12 +303,12 @@ function index() {
           </Typograpghy>
 
           <div className="image-container">
-            <ActivityPictures src={ActivitiesImg9} />
+            <ActivityPictures src={Healthweek3} />
             <div className="grid-right">
-              <ActivityPictures src={ActivitiesImg2} />
-              <ActivityPictures src={ActivitiesImg3} />
-              <ActivityPictures src={ActivitiesImg4} />
-              <ActivityPictures src={ActivitiesImg5} />
+              <ActivityPictures src={HealthWeek2} />
+              <ActivityPictures src={HealthWeek4} />
+              <ActivityPictures src={Social1} />
+              <ActivityPictures src={HeathWeek5} />
             </div>
           </div>
           <Typograpghy
@@ -323,7 +329,7 @@ function index() {
               View More {">>"} <Shine />
             </Button>
           </div>
-        </EachSection> */}
+        </EachSection>
         <EachSection>
           <Typograpghy
             color={colors.secondary}
