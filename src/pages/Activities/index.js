@@ -34,11 +34,11 @@ import Social3 from "../../Images/Social3.jpg";
 import Social4 from "../../Images/Social4.jpg";
 import Social5 from "../../Images/social5.jpg";
 import Image from "../../components/ImageComponent";
-import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg"
-import HealthWeek2 from "../../Images/healthweek2.jpg"
-import Healthweek3 from "../../Images/Healthweek3.JPG"
-import HealthWeek4 from "../../Images/Healthweek4.jpg"
-import HeathWeek5 from "../../Images/Healthweek5.jpg"
+import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg";
+import HealthWeek2 from "../../Images/healthweek2.jpg";
+import Healthweek3 from "../../Images/Healthweek3.JPG";
+import HealthWeek4 from "../../Images/Healthweek4.jpg";
+import HeathWeek5 from "../../Images/Healthweek5.jpg";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -97,12 +97,16 @@ const EachSection = styled.div`
     grid-template-rows: 1fr;
     grid-column-gap: 1rem;
     min-height: 63rem;
+    @media ${devices.tabport} {
+      min-height: 50rem;
+    }
 
     @media ${devices.phone} {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 15px;
+      min-height: auto;
     }
   }
 
