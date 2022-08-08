@@ -2,7 +2,7 @@ import React from "react";
 import { Container as BootstrapContainer } from "react-bootstrap";
 import picture1 from "../../Images/Home-Image.png";
 import picture2 from "../../Images/Picture2.png";
-import President from "../../Images/President.png";
+import President from "../../Images/Lolu.jpg";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import Typograpghy from "../../components/Typography/Typograpghy";

@@ -160,7 +160,7 @@ const Footer = () => {
                 </FooterTypo>
                 <FooterTypo color={colors.white} size="2.3rem">
                   <PhoneCall />
-                  +2347033636990, +2349076390962 
+                  +2347033636990, +2349076390962
                 </FooterTypo>
               </div>
             </ContactUs>
@@ -173,6 +173,33 @@ const Footer = () => {
           mt="20.5rem"
         >
           IFUMSA ©2022. All Rights Reserved
+        </Typograpghy>
+        <Typograpghy
+          color={colors.white}
+          size="1.6rem"
+          align="center"
+          mt="2.5rem"
+        >
+          Build by:{" "}
+          <Link
+            to={{ pathname: "https://seyimarv.netlify.app/" }}
+            target="_blank"
+            style={{
+              color: "inherit",
+            }}
+          >
+            Oyewo Marvelous
+          </Link>
+          {" "}|{" "}
+          <Link
+            to={{ pathname: "https://oktimmy.vercel.app/" }}
+            target="_blank"
+            style={{
+              color: "inherit",
+            }}
+          >
+            Okunlola Timilehin
+          </Link>
         </Typograpghy>
       </Container>
     </Wrapper>

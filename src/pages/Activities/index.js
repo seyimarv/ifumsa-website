@@ -6,8 +6,8 @@ import AboutImage from "../../Images/about.png";
 import { Container as BaseContainer } from "../../styles/container";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
-import { Button } from "../../components/Button";
-import { Shine } from "../../components/Button/shine";
+// import { Button } from "../../components/Button";
+// import { Shine } from "../../components/Button/shine";
 import EECONE from "../../Images/one.jpg";
 import EECTWO from "../../Images/two.jpg";
 import EECFOUR from "../../Images/Four.jpg";
@@ -210,11 +210,11 @@ function index() {
             amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
             semper varius a sit amet metus. Vivamus congue dolor e
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -329,12 +329,16 @@ function index() {
             lineHeight="3.6rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            The Healthweek is an annual event for IFUMSAITES, during which the
+            association plans a number of programs to ensure that IFUMSAITES
+            become a well-rounded group of medical practitioners.
+            <br />
+            In recent years, this Healthweek has included the following
+            programs: an opening rally, an articine, a scientific conference, a
+            public lecture, a debate competition, the Wale Okediran Football
+            Cup, and, of course, a grand dinner party.
+            <br />
+            The 36th of such Healthweek is what we are looking forward to.
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
@@ -368,12 +372,19 @@ function index() {
             lineHeight="3.6rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            The association has recently just had its 2nd Entrepreneurship and
+            Economic Summit.
+            <br />
+            The first which held in the year 2020 as a virtual event during the
+            COVID pandemic under the administration of Dr. Akinola Beloved.
+            <br />
+            This program was borne out of the motivation of producing a crop of
+            medical doctors who are entrepreneurially minded and can stand head
+            to head with their colleagues in other climes of the world.
+            <br />
+            The last edition was a three-day event that included a Symposium,
+            pitching competition, award presentation, and a roundtable
+            discussion session.
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
