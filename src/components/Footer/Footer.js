@@ -181,25 +181,27 @@ const Footer = () => {
           mt="2.5rem"
         >
           Build by:{" "}
-          <Link
-            to={{ pathname: "https://seyimarv.netlify.app/" }}
+          <a
+            href="https://seyimarv.netlify.app/"
             target="_blank"
             style={{
               color: "inherit",
             }}
+            rel="noreferrer"
           >
             Oyewo Marvelous
-          </Link>
-          {" "}|{" "}
-          <Link
-            to={{ pathname: "https://oktimmy.vercel.app/" }}
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://oktimmy.vercel.app/"
             target="_blank"
             style={{
               color: "inherit",
             }}
+            rel="noreferrer"
           >
             Okunlola Timilehin
-          </Link>
+          </a>
         </Typograpghy>
       </Container>
     </Wrapper>
