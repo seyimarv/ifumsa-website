@@ -7,13 +7,20 @@ import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import QuoteImage from "../../Images/Quote";
 import { Button } from "../../components/Button";
-import { Input } from "../../components/Input/Input";
 import { Shine } from "../../components/Button/shine";
 import Collapsible from "../../components/Collapsible";
 import { saveAs } from "file-saver";
 import ifumsaconstitution from "../../Images/IFUMSA-Constitution.pdf";
 import Image from "../../components/ImageComponent";
 import EmailSubscribe from "../../components/Emailsubscribe";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
+const {
+  REACT_APP_MAILCHIMP_API,
+  REACT_APP_MAILCHIMP_U,
+  REACT_APP_MAILCHIMP_ID,
+} = process.env;
+const url = `${REACT_APP_MAILCHIMP_API}?u=${REACT_APP_MAILCHIMP_U}&id=${REACT_APP_MAILCHIMP_ID}`;
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -311,7 +318,16 @@ const About = () => {
         </div>
       </Section3>
       <Section4>
-        <EmailSubscribe />
+        <MailchimpSubscribe
+          url={url}
+          render={({ subscribe, status, message }) => (
+            <EmailSubscribe
+              status={status}
+              message={message}
+              onValidated={subscribe}
+            />
+          )}
+        />
       </Section4>
     </Wrapper>
   );
