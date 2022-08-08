@@ -35,10 +35,10 @@ import Social5 from "../../Images/social5.jpg";
 import Image from "../../components/ImageComponent";
 import BujuHealthWeek from "../../Images/BujuHealthweek1.jpg";
 import Healthweek3 from "../../Images/Healthweekaward.jpg";
-import HealthWeek7 from "../../Images/healthweek7.jpg"
-import healthweek8 from "../../Images/healthweek8.jpg"
-import Healthweek9 from "../../Images/Max.png"
-import PregnantWoman from "../../Images/PregnantWoman.png"
+import HealthWeek7 from "../../Images/healthweek7.jpg";
+import healthweek8 from "../../Images/healthweek8.jpg";
+import Healthweek9 from "../../Images/Max.png";
+import PregnantWoman from "../../Images/PregnantWoman.png";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -171,11 +171,11 @@ function index() {
             amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
             semper varius a sit amet metus. Vivamus congue dolor e
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -242,18 +242,20 @@ function index() {
             lineHeight="3.6rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            To inform people about their health and everything related to it, we
+            employ innovative, strategic, and dynamic approaches. Through
+            research, IFUMSA is tasked with gathering reliable information about
+            health and educating our community on such matters. The club also
+            coordinates with governmental and non-governmental organizations to
+            improve community health, plans awareness campaigns, and conducts
+            outreach initiatives in schools, markets, villages, and other
+            settings.
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -281,18 +283,25 @@ function index() {
             lineHeight="3.6rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            The IQDC has established itself as a prestigious organ of the
+            association due to its history of consistent excellence in academic
+            and debate competitions. This is not about to change any time soon,
+            either.
+            <br />
+            The club boasts a membership of intellectuals who are eager to learn
+            and are fully committed to the association's cause. The renowned
+            "Medicus," a biennial intercollegiate quiz competition that it has
+            won twice in the two editions since its inception, is also organized
+            by the IFUMSA Quiz and Debate Club. The most recent competition,
+            which was held in February 2022, featured schools from five
+            geopolitical zones and was arguably one of the largest and most
+            competitive intercollegiate medical competitions in recent memory.
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -327,11 +336,11 @@ function index() {
             amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
             semper varius a sit amet metus. Vivamus congue dolor e
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -366,11 +375,11 @@ function index() {
             amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
             semper varius a sit amet metus. Vivamus congue dolor e
           </Typograpghy>
-          <div className="button">
+          {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
-          </div>
+          </div> */}
         </EachSection>
       </BaseContainer>
     </Wrapper>

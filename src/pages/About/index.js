@@ -13,6 +13,7 @@ import Collapsible from "../../components/Collapsible";
 import { saveAs } from "file-saver";
 import ifumsaconstitution from "../../Images/IFUMSA-Constitution.pdf";
 import Image from "../../components/ImageComponent";
+import EmailSubscribe from "../../components/Emailsubscribe";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -310,24 +311,7 @@ const About = () => {
         </div>
       </Section3>
       <Section4>
-        <Typograpghy
-          color={colors.secondary}
-          align="center"
-          size="3.6rem"
-          mt="13rem"
-          mb="5.8rem"
-          lineHeight="4.3rem"
-        >
-          Sign up for IFUMSA newsletter
-        </Typograpghy>
-        <Input
-          placeholder="Your Email Here..."
-          color={colors.primary}
-          background={colors.gray2}
-        />
-        <Button isPrimary>
-          Sign up <Shine />
-        </Button>
+        <EmailSubscribe />
       </Section4>
     </Wrapper>
   );

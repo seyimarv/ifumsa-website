@@ -48,7 +48,7 @@ const ContactForm = ({ onValidated, status, message }) => {
         content: "",
         subject: "",
       });
-      toast.success("Thank you for subscribing!");
+      toast.success("Thank you for contacting us!");
     } else toast.error(message.toString());
   }, [message, status]);
 
