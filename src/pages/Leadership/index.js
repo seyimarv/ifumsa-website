@@ -140,7 +140,7 @@ const Leadership = () => {
           })}
         </div>
       </GridContainer>
-      <GridContainer>
+      {/* <GridContainer>
         <Typograpghy
           color={colors.secondary}
           size="3.6rem"
@@ -175,7 +175,7 @@ const Leadership = () => {
             })}
           </div>
         </Typograpghy>
-      </GridContainer>
+      </GridContainer> */}
       {/* <GridContainer>
         <Typograpghy
           color={colors.secondary}

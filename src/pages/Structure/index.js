@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
-import ActivitiesImage from "../../Images/ActivitiesImage.png";
+import { SRBleadership } from "../Leadership/utils";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import ExecutivesImage from "../../Images/Executives.jpg";
@@ -39,6 +39,60 @@ const Section1 = styled.div`
       font-size: 3rem;
       line-height: 3rem;
     }
+  }
+`;
+
+const Member = styled.div`
+  width: 20rem;
+
+  .image {
+    min-height: 25rem;
+  }
+  img {
+    width: 100%;
+    height: 25rem;
+    border-radius: 1.1rem;
+  }
+  @media ${devices.phone} {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    img {
+      height: auto;
+    }
+  }
+`;
+
+const GridContainer = styled.div`
+
+  @media ${devices.phone} {
+    margin: 0rem 2rem;
+
+    .name {
+      font-size: 2.2rem !important;
+      margin-top: 1rem;
+      line-height: 2.4rem !important;
+    }
+    .title {
+      font-size: 1.8rem !important;
+      margin-top: 1rem;
+      line-height: 2.4rem !important;
+    }
+  }
+  .grid {
+    padding-top: 1rem;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.8rem;
+    padding-top: 3rem;
+    justify-content: center;
+  }
+  :not(:last-child) {
+    border-bottom: 1px solid ${colors.primary};
+  }
+  :not(:first-child) {
+    padding-top: 0rem;
   }
 `;
 
@@ -143,7 +197,35 @@ function index() {
             year as ex-officio is saddled with the checks and balances as well
             as regulating the activities of the association.
           </Typograpghy>
-          <Picture src={ActivitiesImage} className="activities-image" />
+          <GridContainer>
+            <div className="grid">
+              {SRBleadership.map((data) => {
+                return (
+                  <Member>
+                    <img alt="ima" src={data.image} key={data.title} />
+                    <Typograpghy
+                      size="1.5rem"
+                      lineHeight="1.6rem"
+                      fontWeight="700"
+                      mt=".5rem"
+                      className="name"
+                    >
+                      {data.name}
+                    </Typograpghy>
+                    <Typograpghy
+                      mt=".3rem"
+                      lineHeight="1.6rem"
+                      size="1.2rem"
+                      fontWeight="500"
+                      className="title"
+                    >
+                      {data.title}
+                    </Typograpghy>
+                  </Member>
+                );
+              })}
+            </div>
+          </GridContainer>
         </EachSection>
       </BodyContainer>
     </Wrapper>
