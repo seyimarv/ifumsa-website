@@ -40,7 +40,7 @@ const Collapsible = ({ children, buttonText, buttonType }) => {
       </Wrapper>
       <Button
         onClick={handleFilterOpening}
-        isSecondary={!buttonType === "primary"}
+        isPrimary={buttonType === "primary"}
         style={{
           marginTop: "2rem",
         }}

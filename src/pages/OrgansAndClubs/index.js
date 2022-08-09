@@ -147,7 +147,7 @@ function OrgansAndClubs() {
               current members.
             </Typograpghy>
 
-            <Collapsible buttonText={"Read"}>
+            <Collapsible buttonText={"View"} buttonType="primary">
               <Typograpghy
                 align="left"
                 color={colors.primary}
@@ -256,7 +256,7 @@ function OrgansAndClubs() {
               to keep people informed about their health and all that pertains
               to it.
             </Typograpghy>
-            <Collapsible buttonText={"Read"}>
+            <Collapsible buttonText={"View"} buttonType="primary">
               <Typograpghy
                 align="left"
                 color={colors.primary}
@@ -318,7 +318,7 @@ function OrgansAndClubs() {
               to keep people informed about their health and all that pertains
               to it.
             </Typograpghy>
-            <Collapsible buttonText={"Read"}>
+            <Collapsible buttonText={"View"} buttonType="primary">
               <Typograpghy
                 align="left"
                 color={colors.primary}
