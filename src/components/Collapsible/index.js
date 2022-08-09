@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button } from "../Button";
 import { Shine } from "../Button/shine";
 
-const Collapsible = ({ children, buttonText }) => {
+const Collapsible = ({ children, buttonText, buttonType }) => {
   const [height, setHeight] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
@@ -40,7 +40,7 @@ const Collapsible = ({ children, buttonText }) => {
       </Wrapper>
       <Button
         onClick={handleFilterOpening}
-        isSecondary
+        isSecondary={!buttonType === "primary"}
         style={{
           marginTop: "2rem",
         }}

@@ -16,6 +16,7 @@ import Bashua from "../../Images/Elizabeth.jpg"
 import TeeWhy from "../../Images/TeeWhy.jpg"
 import Bassey from "../../Images/OkuBassey.jpg"
 import AlabiHammed from "../../Images/AlabiHammed.jpg"
+import Adelagun from "../../Images/Adelagun.jpg"
 
 export const Council = [
   {
@@ -101,11 +102,11 @@ export const SRBleadership = [
     title: "Part 3 constituency leader",
     image: TeeWhy,
   },
-//   {
-//     name: "Mathew Temitayo",
-//     title: "Part 4 constituency leader",
-//     image: TeeWhy,
-//   },
+  {
+    name: "Adelagun Yinka",
+    title: "Part 4 constituency leader",
+    image: Adelagun,
+  },
   {
     name: "Oku Bassey",
     title: "Part 5 constituency leader",

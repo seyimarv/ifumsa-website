@@ -39,6 +39,7 @@ import HealthWeek7 from "../../Images/healthweek7.jpg";
 import healthweek8 from "../../Images/healthweek8.jpg";
 import Healthweek9 from "../../Images/Max.png";
 import PregnantWoman from "../../Images/PregnantWoman.png";
+import Collapsible from "../../components/Collapsible";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -161,15 +162,13 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            IFUMSA makes an effort to ensure that her members are not only
+            bookworms, but also have a good time. So, in IFUMSA, we organize a
+            variety of social events such as hangouts, movie nights, parties,
+            and other programs aimed at fostering social relationships.
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
@@ -200,15 +199,14 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
-            <span>IFUMSA Alumni Relations Committee</span>, consectetur
-            adipiscing elit. Donec ligula nibh, interdum non enim sit amet,
-            iaculis aliquet nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Aliquam sit
-            amet ipsum ac velit egestas ultrices. Vestibulum et neque id ex
-            semper varius a sit amet metus. Vivamus congue dolor e
+            We value our members' participation in sports and encourage a spirit
+            of sportsmanship within the association. As a result, we organize
+            and have clubs for various types of sports. The Wale Okediran
+            Competition, IFUMSA Athletics, IFUMSA Chess Competition, and Tennis
+            Competition are examples of such activities.
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
@@ -239,23 +237,21 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
             To inform people about their health and everything related to it, we
-            employ innovative, strategic, and dynamic approaches. Through
-            research, IFUMSA is tasked with gathering reliable information about
-            health and educating our community on such matters. The club also
-            coordinates with governmental and non-governmental organizations to
-            improve community health, plans awareness campaigns, and conducts
-            outreach initiatives in schools, markets, villages, and other
-            settings.
+            employ innovative, strategic, and dynamic approaches.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              Through research, IFUMSA is tasked with gathering reliable
+              information about health and educating our community on such
+              matters. We also collaborate with governmental and
+              non-governmental organizations to improve community health, plans
+              awareness campaigns, and conducts outreach initiatives in schools,
+              markets, villages, and other settings.
+            </Collapsible>
           </Typograpghy>
-          {/* <div className="button">
-            <Button isPrimary>
-              View More {">>"} <Shine />
-            </Button>
-          </div> */}
         </EachSection>
         <EachSection>
           <Typograpghy
@@ -280,22 +276,24 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
-            The IQDC has established itself as a prestigious organ of the
-            association due to its history of consistent excellence in academic
+            We have established ourselves as a prestigious medical student
+            association due to our history of consistent excellence in academic
             and debate competitions. This is not about to change any time soon,
-            either.
-            <br />
-            The club boasts a membership of intellectuals who are eager to learn
-            and are fully committed to the association's cause. The renowned
-            "Medicus," a biennial intercollegiate quiz competition that it has
-            won twice in the two editions since its inception, is also organized
-            by the IFUMSA Quiz and Debate Club. The most recent competition,
-            which was held in February 2022, featured schools from five
-            geopolitical zones and was arguably one of the largest and most
-            competitive intercollegiate medical competitions in recent memory.
+            either. We boast a membership of intellectuals who are eager to
+            learn and are fully committed to the association's cause.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              The renowned "Medicus," a biennial intercollegiate quiz
+              competition that it has won twice in the two editions since its
+              inception, is organized by the IFUMSA Quiz and Debate Club. The
+              most recent competition, which was held in February 2022, featured
+              schools from five geopolitical zones and was arguably one of the
+              largest and most competitive intercollegiate medical competitions
+              in recent memory.
+            </Collapsible>
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
@@ -326,19 +324,22 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
-            The Healthweek is an annual event for IFUMSAITES, during which the
-            association plans a number of programs to ensure that IFUMSAITES
+            IFUMSAITES' Healthweek is an annual event during which the
+            association plans a variety of programs to ensure that IFUMSAITES
             become a well-rounded group of medical practitioners.
-            <br />
-            In recent years, this Healthweek has included the following
-            programs: an opening rally, an articine, a scientific conference, a
-            public lecture, a debate competition, the Wale Okediran Football
-            Cup, and, of course, a grand dinner party.
-            <br />
-            The 36th of such Healthweek is what we are looking forward to.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              This Healthweek has featured the following programs in recent
+              years: an opening rally, an articine, a scientific conference, a
+              public lecture, a debate competition, the Wale Okediran Football
+              Cup, and, of course, a grand dinner party.
+              <br />
+              <br />
+              We are looking forward to the 36th edition of Healthweek.
+            </Collapsible>
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>
@@ -369,22 +370,24 @@ function index() {
           <Typograpghy
             align="left"
             color={colors.primary}
-            lineHeight="3.6rem"
+            lineHeight="3rem"
             style={{ paddingTop: "4rem" }}
           >
             The association has recently just had its 2nd Entrepreneurship and
-            Economic Summit.
-            <br />
-            The first which held in the year 2020 as a virtual event during the
-            COVID pandemic under the administration of Dr. Akinola Beloved.
-            <br />
-            This program was borne out of the motivation of producing a crop of
-            medical doctors who are entrepreneurially minded and can stand head
-            to head with their colleagues in other climes of the world.
-            <br />
-            The last edition was a three-day event that included a Symposium,
-            pitching competition, award presentation, and a roundtable
-            discussion session.
+            Economic Summit. The first which held in the year 2020 as a virtual
+            event during the COVID pandemic under the administration of Dr.
+            Akinola Beloved.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              This program was borne out of the motivation of producing a crop
+              of medical doctors who are entrepreneurially minded and can stand
+              head to head with their colleagues in other climes of the world.
+              <br />
+              <br />
+              The last edition was a three-day event that included a Symposium,
+              pitching competition, award presentation, and a roundtable
+              discussion session.
+            </Collapsible>
           </Typograpghy>
           {/* <div className="button">
             <Button isPrimary>

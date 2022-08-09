@@ -180,12 +180,12 @@ const Footer = () => {
           align="center"
           mt="2.5rem"
         >
-          Build by:{" "}
+          Built by:{" "}
           <a
             href="https://seyimarv.netlify.app/"
             target="_blank"
             style={{
-              color: "inherit",
+              color: "whitesmoke",
             }}
             rel="noreferrer"
           >
@@ -196,7 +196,7 @@ const Footer = () => {
             href="https://oktimmy.vercel.app/"
             target="_blank"
             style={{
-              color: "inherit",
+              color: "whitesmoke",
             }}
             rel="noreferrer"
           >
