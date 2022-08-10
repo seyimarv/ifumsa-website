@@ -156,7 +156,7 @@ const Footer = () => {
                 </FooterTypo>
                 <FooterTypo color={colors.white} size="2.3rem">
                   <Envelope />
-                  ifumsacohs@oauife.edu.ng
+                  oauifumsa@gmail.com
                 </FooterTypo>
                 <FooterTypo color={colors.white} size="2.3rem">
                   <PhoneCall />
