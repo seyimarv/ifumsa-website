@@ -21,12 +21,12 @@ import Kolade from "../../Images/KoladeJames.jpeg";
 import Bolu from "../../Images/Bolu.jpeg";
 import Samgee from "../../Images/SamGee.jpg";
 import OdeKunle from "../../Images/Odekunle.jpeg";
-import Famokunwa from "../../Images/Famokunwa.jpeg"
+import Famokunwa from "../../Images/Famokunwa.jpeg";
 
 export const Council = [
   {
     image: President,
-    name: "Akinlolu Akinteye",
+    name: "Akinloluwa S. Akinteye",
     title: "President",
   },
   {
