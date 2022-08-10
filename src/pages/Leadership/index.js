@@ -17,6 +17,7 @@ const Wrapper = styled(Container)`
 const Picture1 = styled(Image)`
   min-height: 10rem;
   width: 100%;
+  object-fit: cover;
 `;
 
 const Section1 = styled.div`

@@ -53,5 +53,6 @@ const Wrapper = styled.div`
     min-height: inherit;
     border-radius: inherit;
     max-height: inherit;
+    object-fit: inherit;
   }
 `;

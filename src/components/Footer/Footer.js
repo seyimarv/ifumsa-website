@@ -200,7 +200,7 @@ const Footer = () => {
             }}
             rel="noreferrer"
           >
-            Okunlola Timilehin
+            Okunola Timilehin
           </a>
         </Typograpghy>
       </Container>

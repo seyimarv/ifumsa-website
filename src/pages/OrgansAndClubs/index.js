@@ -4,15 +4,28 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import AboutImage from "../../Images/about.png";
 // import ActivitiesImage from "../../Images/ActivitiesImage.png";
-import IARC from "../../Images/IARC_IMAGES/iarc_1.jpeg";
 import IHAC from "../../Images/IHAC_IMAGES/ihac_1.jpg";
-import IFEMED from "../../Images/IFEMED_IMAGES/ifemed_1.jpg";
-import Medivoice from "../../Images/Medivoice.png";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import Image from "../../components/ImageComponent";
 import Collapsible from "../../components/Collapsible";
 import { Container as BaseContainer } from "../../styles/container";
+import ImageScroll from "./PhotoGallery";
+import Medivoice1 from "../../Images/Medivoice1.jpeg";
+import Medivoice2 from "../../Images/Medivoice2.jpeg";
+import Medivoice3 from "../../Images/Medivoice3.jpeg";
+import IQDC1 from "../../Images/IQDC1.jpeg";
+import IQDC2 from "../../Images/IQDC2.jpeg";
+import IQDC3 from "../../Images/IQDC3.jpeg";
+import IHAC1 from "../../Images/IHAC1.jpeg";
+import IHAC3 from "../../Images/IHAC.jpeg";
+import JOURNAL1 from "../../Images/JOURNAL1.jpeg";
+import JOURNAL2 from "../../Images/JOURNAL2.jpeg";
+import JOURNAL3 from "../../Images/JOURNAL3.jpeg";
+import ALUMNI1 from "../../Images/ALUMNI1.jpeg";
+import ALUMNI2 from "../../Images/ALUMNI2.jpeg";
+import ALUMNI3 from "../../Images/ALUMNI3.jpeg";
+import ALUMNI4 from "../../Images/ALUMNI4.jpeg";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -46,27 +59,21 @@ const PictureBg = styled(Image)`
   width: 100%;
 `;
 
-const Picture = styled(Image)`
-  border-radius: 1rem;
-  min-height: 40rem;
-  @media ${devices.tabport} {
-    margin-top: 2rem;
-    min-height: 22rem;
-  }
-`;
-
 const EachSection = styled.div`
   margin: 0 2rem;
   padding: 8rem 4rem;
   display: flex;
   flex-direction: row;
   border-bottom: 2px solid ${colors.primary};
-
+  :first-child {
+    width: 100%;
+  }
   :last-child {
     border-bottom: none;
   }
 
   @media ${devices.tabport} {
+    flex-direction: column;
     padding: 4rem 2rem;
     margin: 0 1rem;
   }
@@ -95,14 +102,23 @@ const EachSection = styled.div`
   }
 
   .flex-right {
-    flex: 1;
+    width: 40%;
     padding-left: 3rem;
+    @media ${devices.tabport} {
+      width: 100%;
+    }
 
     @media ${devices.phone} {
       padding-left: 0;
     }
   }
 `;
+
+const MEDIVOICEPHOTOS = [Medivoice1, Medivoice2, Medivoice3];
+const IQDCPHOTOS = [IQDC1, IQDC2, IQDC3];
+const IHACPHOTOS = [IHAC1, IHAC, IHAC3];
+const JOURNALPHOTOS = [JOURNAL1, JOURNAL2, JOURNAL3];
+const ALUMNIPHOTOS = [ALUMNI1, ALUMNI2, ALUMNI3, ALUMNI4];
 
 function OrgansAndClubs() {
   return (
@@ -180,7 +196,7 @@ function OrgansAndClubs() {
             </Collapsible>
           </div>
           <div className="flex-right">
-            <Picture src={IARC} />
+            <ImageScroll photos={ALUMNIPHOTOS} />
           </div>
         </EachSection>
         {/* <EachSection>
@@ -290,7 +306,7 @@ function OrgansAndClubs() {
             </Collapsible>
           </div>
           <div className="flex-right">
-            <Picture src={IHAC} />
+            <ImageScroll photos={IHACPHOTOS} />
           </div>
         </EachSection>
         <EachSection>
@@ -352,7 +368,7 @@ function OrgansAndClubs() {
             </Collapsible>
           </div>
           <div className="flex-right">
-            <Picture src={IFEMED} />
+            <ImageScroll photos={JOURNALPHOTOS} />
           </div>
         </EachSection>
         <EachSection>
@@ -407,7 +423,7 @@ function OrgansAndClubs() {
             </Typograpghy>
           </div>
           <div className="flex-right">
-            <Picture src={Medivoice} />
+            <ImageScroll photos={MEDIVOICEPHOTOS} />
           </div>
         </EachSection>
         <EachSection>
@@ -491,7 +507,7 @@ function OrgansAndClubs() {
             </Typograpghy>
           </div>
           <div className="flex-right">
-            <Picture src={Medivoice} />
+            <ImageScroll photos={IQDCPHOTOS} />
           </div>
         </EachSection>
       </BaseContainer>
