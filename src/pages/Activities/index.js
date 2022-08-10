@@ -6,8 +6,11 @@ import AboutImage from "../../Images/about.png";
 import { Container as BaseContainer } from "../../styles/container";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
-// import { Button } from "../../components/Button";
-// import { Shine } from "../../components/Button/shine";
+import Podcast1 from "../../Images/Podcast1.jpg";
+import PodcastLogo from "../../Images/Podcast6.jpg";
+import Podcast2 from "../../Images/Podcast2.jpg";
+import Podcast3 from "../../Images/Podcast3.jpg";
+import Podcast4 from "../../Images/Podcast4.jpg";
 import EECONE from "../../Images/one.jpg";
 import EECTWO from "../../Images/two.jpg";
 import EECFOUR from "../../Images/Four.jpg";
@@ -40,6 +43,11 @@ import healthweek8 from "../../Images/healthweek8.jpg";
 import Healthweek9 from "../../Images/Max.png";
 import PregnantWoman from "../../Images/PregnantWoman.png";
 import Collapsible from "../../components/Collapsible";
+import Plus1 from "../../Images/plus1.jpeg"
+import Plus2 from "../../Images/plus2.jpeg"
+import Plus3 from "../../Images/plus3.jpeg"
+import Plus4 from "../../Images/Plus4.jpeg"
+import Plus5 from "../../Images/Plus5.jpeg"
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -58,7 +66,7 @@ const ActivityPictures = styled(Image)`
   border-radius: 10px;
   object-fit: cover;
   layout: fill;
-  max-height: 68rem;
+  overflow: hidden;
 `;
 
 const Section1 = styled.div`
@@ -116,6 +124,7 @@ const EachSection = styled.div`
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
+    max-height: 68rem;
   }
 
   .button {
@@ -139,6 +148,52 @@ function index() {
         </Typograpghy>
       </Section1>
       <BaseContainer>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            IFUMSA PODCAST (VOICES N' VIBES)
+          </Typograpghy>
+
+          <div className="image-container">
+            <ActivityPictures src={Podcast3} />
+            <div className="grid-right">
+              <ActivityPictures src={Podcast1} />
+              <ActivityPictures src={Podcast2} />
+              <ActivityPictures src={Podcast4} />
+              <ActivityPictures src={PodcastLogo} />
+            </div>
+          </div>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            The Voices N' Vibes Podcast was officially launched on October 23,
+            2021, in the quintessential administration to constantly keep
+            IFUMSAITES informed of events in college and their society.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              Since its inception, this podcast's audience has grown to well
+              over 1500 plays. The podcast's episodes cover a wide range of
+              topics, including medical school stories, health, lifestyle,
+              fashion, mental health, and personal development advice.
+              <br />
+              <a
+                href="https://anchor.fm/ifumsa-roadshow"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Listen here
+              </a>
+            </Collapsible>
+          </Typograpghy>
+        </EachSection>
         <EachSection>
           <Typograpghy
             color={colors.secondary}
@@ -394,6 +449,51 @@ function index() {
               View More {">>"} <Shine />
             </Button>
           </div> */}
+        </EachSection>
+        <EachSection>
+          <Typograpghy
+            color={colors.secondary}
+            size="3.6rem"
+            lineHeight="4rem"
+            align="center"
+            style={{ padding: "4rem 0 2rem" }}
+          >
+            DOCTOR PLUS SERIES
+          </Typograpghy>
+
+          <div className="image-container">
+            <ActivityPictures src={Plus2} />
+            <div className="grid-right">
+              <ActivityPictures src={Plus1} />
+              <ActivityPictures src={Plus3} />
+              <ActivityPictures src={Plus4} />
+              <ActivityPictures src={Plus5} />
+            </div>
+          </div>
+          <Typograpghy
+            align="left"
+            color={colors.primary}
+            lineHeight="3rem"
+            style={{ paddingTop: "4rem" }}
+          >
+            The Doctor Plus Series was birthed in 2017 as a series of event to
+            enlighten medical students on the career pathways beyond Medical and
+            Clinical practice and sometimes even delving more into opportunities
+            within the medical space.
+            <Collapsible buttonText="View" buttonType="primary">
+              <br />
+              The first edition was on Medical Entrepreneurship. The second
+              edition delved into Military Opportunities for Doctors and the
+              third enlightened medical students on the health technology.
+              <br />
+              <br />
+              The theme for Doctor Plus 4.0 was{" "}
+              <strong>
+                Accessing Global Opportunities for Medical Students
+              </strong>{" "}
+              and it was all value-packed, impactful and relevant
+            </Collapsible>
+          </Typograpghy>
         </EachSection>
       </BaseContainer>
     </Wrapper>

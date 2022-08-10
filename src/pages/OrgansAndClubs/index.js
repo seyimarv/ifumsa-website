@@ -7,7 +7,7 @@ import AboutImage from "../../Images/about.png";
 import IARC from "../../Images/IARC_IMAGES/iarc_1.jpeg";
 import IHAC from "../../Images/IHAC_IMAGES/ihac_1.jpg";
 import IFEMED from "../../Images/IFEMED_IMAGES/ifemed_1.jpg";
-// import Medivoice from "../../Images/Medivoice.png";
+import Medivoice from "../../Images/Medivoice.png";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import Image from "../../components/ImageComponent";
@@ -355,54 +355,145 @@ function OrgansAndClubs() {
             <Picture src={IFEMED} />
           </div>
         </EachSection>
-        {/* <EachSection>
-        <div className="flex-left">
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="left"
-          >
-            Medivoice
-          </Typograpghy>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="2.3rem"
-            size="1.5rem"
-            style={{ paddingTop: "2rem" }}
-          >
-            <span>Medivoice</span>, consectetur adipiscing elit. Donec ligula
-            nibh, interdum non enim sit amet, iaculis aliquet nunc. Class aptent
-            taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Aliquam sit amet ipsum ac velit egestas ultrices.
-            Vestibulum et neque id ex semper varius a sit amet metus. Vivamus
-            congue dolor eget aliquam hendrerit.
-          </Typograpghy>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="2.3rem"
-            size="1.5rem"
-            style={{ paddingTop: "2rem" }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ligula nibh, interdum non enim sit amet, iaculis aliquet nunc. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Aliquam sit amet ipsum ac velit egestas
-            ultrices. Vestibulum et neque id ex semper varius a sit amet metus.
-            Vivamus congue dolor eget aliquam hendrerit.
-          </Typograpghy>
-          <div className="button">
-            <Button isPrimary>
-              View More {">>"} <Shine />
-            </Button>
+        <EachSection>
+          <div className="flex-left">
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="left"
+            >
+              Medivoice
+            </Typograpghy>
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="2.3rem"
+              size="1.5rem"
+              style={{ paddingTop: "2rem" }}
+            >
+              MediVoice is the literary and journalism club of the Obafemi
+              Awolowo University Medical Students’ Association. With a diverse
+              group of writers, it focuses on delivering a wide range of
+              literary content and reports of activities & events.
+              <Collapsible buttonText={"View"} buttonType="primary">
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  MediVoice stands in the gap between the Ife Med life and Other
+                  Associations on our great campus. We show the world what it is
+                  like being a medical student and how our lives go far beyond
+                  the books. We also provide an unwinding space for IFUMSAites
+                  through our diverse array of topics spanning lifestyle, sports
+                  news, flash fiction, and many more.
+                </Typograpghy>
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  We are saddled with the duty of publishing the association’s
+                  magazine (CADUCEUS) and bridging the communication gap between
+                  classes of IFUMSA to ensure a clear, unified voice that speaks
+                  and is heard, reaching every member of our Great Association.
+                </Typograpghy>
+              </Collapsible>
+            </Typograpghy>
           </div>
-        </div>
-        <div className="flex-right">
-          <Picture src={Medivoice} />
-        </div>
-      </EachSection> */}
+          <div className="flex-right">
+            <Picture src={Medivoice} />
+          </div>
+        </EachSection>
+        <EachSection>
+          <div className="flex-left">
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="left"
+            >
+              IFUMSA Quiz and Debate Club (IQDC)
+            </Typograpghy>
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="2.3rem"
+              size="1.5rem"
+              style={{ paddingTop: "2rem" }}
+            >
+              The IFUMSA Quiz and Debate Club (IQDC) is the organ of the Obafemi
+              Awolowo University Medical Students' Association (IFUMSA) that
+              represents the college at academic competitions - quizzes and
+              debates.
+              <Collapsible buttonText={"View"} buttonType="primary">
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  The club's culture is to serve as the academic front of the
+                  Obafemi Awolowo University Medical Students' Association
+                  (IFUMSA) at intercollegiate quizzes and debates; to showcase -
+                  and bolster - its members' intellectual prowess at these
+                  competitive gatherings; and to maintain a reputable academic
+                  image of the Obafemi Awolowo University Medical Students'
+                  Association (IFUMSA) amidst other MSAs in the region and
+                  beyond.
+                </Typograpghy>
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  IQDC's track record of consistent excellence at academic and
+                  Debate competitions over the years has cemented its place as a
+                  prestigious organ of the association - and indeed, this is not
+                  changing anytime soon. The club boasts the membership of
+                  teachable and knowledge-driven intellectuals fully committed
+                  to the cause of the association.
+                </Typograpghy>
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  Membership is opened to IFUMSAites in their second year and
+                  above.
+                </Typograpghy>
+                <Typograpghy
+                  align="left"
+                  color={colors.primary}
+                  lineHeight="2.3rem"
+                  size="1.5rem"
+                  style={{ paddingTop: "2rem" }}
+                >
+                  The IFUMSA Quiz and Debate Club is also the organizer of the
+                  renowned "Medicus", a biennial intercollegiate quiz
+                  competition which it has won twice in the two editions since
+                  its conception. The last edition, which took place in February
+                  2022, was arguably one of the biggest and most intense
+                  intercollegiate medical competitions in recent years, with
+                  schools from five geo-political zones in attendance.
+                </Typograpghy>
+              </Collapsible>
+            </Typograpghy>
+          </div>
+          <div className="flex-right">
+            <Picture src={Medivoice} />
+          </div>
+        </EachSection>
       </BaseContainer>
     </Wrapper>
   );

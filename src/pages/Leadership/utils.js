@@ -9,14 +9,19 @@ import Badru from "../../Images/Badru.jpg";
 import Evelyn from "../../Images/Evelyn.jpg";
 import Dolapo from "../../Images/Dolapo.jpg";
 import Speaker from "../../Images/Joshua.jpg";
-import DeputySpeaker from "../../Images/Kizi.jpg"
-import Clerk from "../../Images/Mary.JPG"
-import Sobayo from "../../Images/Sobayo.jpg"
-import Bashua from "../../Images/Elizabeth.jpg"
-import TeeWhy from "../../Images/TeeWhy.jpg"
-import Bassey from "../../Images/OkuBassey.jpg"
-import AlabiHammed from "../../Images/AlabiHammed.jpg"
-import Adelagun from "../../Images/Adelagun.jpg"
+import DeputySpeaker from "../../Images/Kizi.jpg";
+import Clerk from "../../Images/Mary.JPG";
+import Sobayo from "../../Images/Sobayo.jpg";
+import Bashua from "../../Images/Elizabeth.jpg";
+import TeeWhy from "../../Images/TeeWhy.jpg";
+import Bassey from "../../Images/OkuBassey.jpg";
+import AlabiHammed from "../../Images/AlabiHammed.jpg";
+import Adelagun from "../../Images/Adelagun.jpg";
+import Kolade from "../../Images/KoladeJames.jpeg";
+import Bolu from "../../Images/Bolu.jpeg";
+import Samgee from "../../Images/SamGee.jpg";
+import OdeKunle from "../../Images/Odekunle.jpeg";
+import Famokunwa from "../../Images/Famokunwa.jpeg"
 
 export const Council = [
   {
@@ -68,6 +73,34 @@ export const Council = [
     image: Evelyn,
     name: "Atoyebi  Evelyn",
     title: "Welfare Director",
+  },
+];
+
+export const Committee = [
+  {
+    name: "Kolade Adegoke",
+    role: "IARC Chairman.",
+    image: Kolade,
+  },
+  {
+    name: "Onifade Boluwatife",
+    role: "Editor-in-Chief, Medivoice",
+    image: Bolu,
+  },
+  {
+    name: "Michael Onasanya",
+    role: "Editor-in-Chief, IFEMED Journal",
+    image: Samgee,
+  },
+  {
+    name: "Odekunle Oluwaseun",
+    role: "Chairman, IHAC",
+    image: OdeKunle,
+  },
+  {
+    name: "Ayotunde Famokunwa",
+    role: "Chairman, IQDC",
+    image: Famokunwa,
   },
 ];
 

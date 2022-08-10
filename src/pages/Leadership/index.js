@@ -5,7 +5,7 @@ import { devices } from "../../styles/mediaQueries";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import AboutImage from "../../Images/about.png";
-import { Council, SRBleadership } from "./utils";
+import { Committee, Council } from "./utils";
 import Image from "../../components/ImageComponent";
 
 const Wrapper = styled(Container)`
@@ -76,12 +76,12 @@ const Member = styled.div`
     border-radius: 1.1rem;
   }
   @media ${devices.phone} {
-     width: 100%;
-     margin-bottom: 3rem;
+    width: 100%;
+    margin-bottom: 3rem;
 
-     img {
-       height: auto;
-     }
+    img {
+      height: auto;
+    }
   }
 `;
 
@@ -176,7 +176,7 @@ const Leadership = () => {
           </div>
         </Typograpghy>
       </GridContainer> */}
-      {/* <GridContainer>
+      <GridContainer>
         <Typograpghy
           color={colors.secondary}
           size="3.6rem"
@@ -186,17 +186,17 @@ const Leadership = () => {
         >
           Commitee
           <div className="grid">
-            {array.map((data) => {
+            {Committee.map((data) => {
               return (
                 <Member>
-                  <img alt="ima" src={President} key={data} />
+                  <img alt="ima" src={data.image} key={data.role} />
                   <Typograpghy
                     size="2.1rem"
                     lineHeight="2.6rem"
                     fontWeight="700"
                     mt="1.7rem"
                   >
-                    Akinlolu Akinteye
+                    {data.name}
                   </Typograpghy>
                   <Typograpghy
                     mt="1.4rem"
@@ -204,14 +204,14 @@ const Leadership = () => {
                     size="1.7rem"
                     fontWeight="500"
                   >
-                    President
+                    {data.role}
                   </Typograpghy>
                 </Member>
               );
             })}
           </div>
         </Typograpghy>
-      </GridContainer> */}
+      </GridContainer>
     </Wrapper>
   );
 };
