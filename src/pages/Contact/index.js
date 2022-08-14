@@ -10,6 +10,7 @@ import { devices } from "../../styles/mediaQueries";
 import ContactForm from "./contactform";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import Image from "../../components/ImageComponent";
+import Transitions from "../../components/pageTransitions";
 
 const {
   REACT_APP_MAILCHIMP_API,
@@ -91,48 +92,50 @@ const Section2 = styled.div`
 
 const Index = () => {
   return (
-    <Wrapper fluid>
-      <Section1>
-        <Picture src={AboutImage} />
-        <Typograpghy
-          color={colors.secondary}
-          size="6.4rem"
-          lineHeight="7.8rem"
-          className="text"
-        >
-          Contact Us
-        </Typograpghy>
-      </Section1>
-      <Section2>
-        <Typograpghy
-          color={colors.secondary}
-          align="center"
-          size="3.6rem"
-          mt="6rem"
-          lineHeight="4.3rem"
-        >
-          Get In Touch With Us
-        </Typograpghy>
-        <MailchimpSubscribe
-          url={url}
-          render={({ subscribe, status, message }) => (
-            <ContactForm
-              status={status}
-              message={message}
-              onValidated={subscribe}
-            />
-          )}
-        />
-      </Section2>
+    <Transitions>
+      <Wrapper fluid>
+        <Section1>
+          <Picture src={AboutImage} />
+          <Typograpghy
+            color={colors.secondary}
+            size="6.4rem"
+            lineHeight="7.8rem"
+            className="text"
+          >
+            Contact Us
+          </Typograpghy>
+        </Section1>
+        <Section2>
+          <Typograpghy
+            color={colors.secondary}
+            align="center"
+            size="3.6rem"
+            mt="6rem"
+            lineHeight="4.3rem"
+          >
+            Get In Touch With Us
+          </Typograpghy>
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <ContactForm
+                status={status}
+                message={message}
+                onValidated={subscribe}
+              />
+            )}
+          />
+        </Section2>
 
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.534469638717!2d4.523631014930581!3d7.516529112907151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf4a59b9cfc43153!2sCollege%20of%20Health%20Sciences!5e0!3m2!1sen!2sng!4v1656160250577!5m2!1sen!2sng"
-        width="100%"
-        height="728"
-        frameBorder="0"
-        allowFullScreen=""
-      />
-    </Wrapper>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.534469638717!2d4.523631014930581!3d7.516529112907151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf4a59b9cfc43153!2sCollege%20of%20Health%20Sciences!5e0!3m2!1sen!2sng!4v1656160250577!5m2!1sen!2sng"
+          width="100%"
+          height="728"
+          frameBorder="0"
+          allowFullScreen=""
+        />
+      </Wrapper>
+    </Transitions>
   );
 };
 

@@ -43,11 +43,12 @@ import healthweek8 from "../../Images/healthweek8.jpg";
 import Healthweek9 from "../../Images/Max.png";
 import PregnantWoman from "../../Images/PregnantWoman.png";
 import Collapsible from "../../components/Collapsible";
-import Plus1 from "../../Images/plus1.jpeg"
-import Plus2 from "../../Images/plus2.jpeg"
-import Plus3 from "../../Images/plus3.jpeg"
-import Plus4 from "../../Images/Plus4.jpeg"
-import Plus5 from "../../Images/Plus5.jpeg"
+import Plus1 from "../../Images/plus1.jpeg";
+import Plus2 from "../../Images/plus2.jpeg";
+import Plus3 from "../../Images/plus3.jpeg";
+import Plus4 from "../../Images/Plus4.jpeg";
+import Plus5 from "../../Images/Plus5.jpeg";
+import Transitions from "../../components/pageTransitions";
 
 const Wrapper = styled(Container)`
   padding: 1rem 0rem;
@@ -135,368 +136,371 @@ const EachSection = styled.div`
 
 function index() {
   return (
-    <Wrapper fluid>
-      <Section1>
-        <Picture src={AboutImage} />
-        <Typograpghy
-          color={colors.secondary}
-          size="6.4rem"
-          lineHeight="7.8rem"
-          className="text"
-        >
-          Our Activities
-        </Typograpghy>
-      </Section1>
-      <BaseContainer>
-        <EachSection>
+    <Transitions>
+      <Wrapper fluid>
+        <Section1>
+          <Picture src={AboutImage} />
           <Typograpghy
             color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
+            size="6.4rem"
+            lineHeight="7.8rem"
+            className="text"
           >
-            IFUMSA PODCAST (VOICES N' VIBES)
+            Our Activities
           </Typograpghy>
+        </Section1>
+        <BaseContainer>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              IFUMSA PODCAST (VOICES N' VIBES)
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Podcast3} />
-            <div className="grid-right">
-              <ActivityPictures src={Podcast1} />
-              <ActivityPictures src={Podcast2} />
-              <ActivityPictures src={Podcast4} />
-              <ActivityPictures src={PodcastLogo} />
+            <div className="image-container">
+              <ActivityPictures src={Podcast3} />
+              <div className="grid-right">
+                <ActivityPictures src={Podcast1} />
+                <ActivityPictures src={Podcast2} />
+                <ActivityPictures src={Podcast4} />
+                <ActivityPictures src={PodcastLogo} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            The Voices N' Vibes Podcast was officially launched on October 23,
-            2021, in the quintessential administration to constantly keep
-            IFUMSAITES informed of events in college and their society.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              Since its inception, this podcast's audience has grown to well
-              over 1500 plays. The podcast's episodes cover a wide range of
-              topics, including medical school stories, health, lifestyle,
-              fashion, mental health, and personal development advice.
-              <br />
-              <a
-                href="https://anchor.fm/ifumsa-roadshow"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Listen here
-              </a>
-            </Collapsible>
-          </Typograpghy>
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Social Activities
-          </Typograpghy>
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              The Voices N' Vibes Podcast was officially launched on October 23,
+              2021, in the quintessential administration to constantly keep
+              IFUMSAITES informed of events in college and their society.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                Since its inception, this podcast's audience has grown to well
+                over 1500 plays. The podcast's episodes cover a wide range of
+                topics, including medical school stories, health, lifestyle,
+                fashion, mental health, and personal development advice.
+                <br />
+                <a
+                  href="https://anchor.fm/ifumsa-roadshow"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Listen here
+                </a>
+              </Collapsible>
+            </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Social Activities
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={BujuHealthWeek} />
-            <div className="grid-right">
-              <ActivityPictures src={Social2} />
-              <ActivityPictures src={Social3} />
-              <ActivityPictures src={Social4} />
-              <ActivityPictures src={Social5} />
+            <div className="image-container">
+              <ActivityPictures src={BujuHealthWeek} />
+              <div className="grid-right">
+                <ActivityPictures src={Social2} />
+                <ActivityPictures src={Social3} />
+                <ActivityPictures src={Social4} />
+                <ActivityPictures src={Social5} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            IFUMSA makes an effort to ensure that her members are not only
-            bookworms, but also have a good time. So, in IFUMSA, we organize a
-            variety of social events such as hangouts, movie nights, parties,
-            and other programs aimed at fostering social relationships.
-          </Typograpghy>
-          {/* <div className="button">
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              IFUMSA makes an effort to ensure that her members are not only
+              bookworms, but also have a good time. So, in IFUMSA, we organize a
+              variety of social events such as hangouts, movie nights, parties,
+              and other programs aimed at fostering social relationships.
+            </Typograpghy>
+            {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
           </div> */}
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Sports Activities
-          </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Sports Activities
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Sport5} />
-            <div className="grid-right">
-              <ActivityPictures src={Sport1} />
-              <ActivityPictures src={Sport2} />
-              <ActivityPictures src={Sport3} />
-              <ActivityPictures src={Sport4} />
+            <div className="image-container">
+              <ActivityPictures src={Sport5} />
+              <div className="grid-right">
+                <ActivityPictures src={Sport1} />
+                <ActivityPictures src={Sport2} />
+                <ActivityPictures src={Sport3} />
+                <ActivityPictures src={Sport4} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            We value our members' participation in sports and encourage a spirit
-            of sportsmanship within the association. As a result, we organize
-            and have clubs for various types of sports. The Wale Okediran
-            Competition, IFUMSA Athletics, IFUMSA Chess Competition, and Tennis
-            Competition are examples of such activities.
-          </Typograpghy>
-          {/* <div className="button">
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              We value our members' participation in sports and encourage a
+              spirit of sportsmanship within the association. As a result, we
+              organize and have clubs for various types of sports. The Wale
+              Okediran Competition, IFUMSA Athletics, IFUMSA Chess Competition,
+              and Tennis Competition are examples of such activities.
+            </Typograpghy>
+            {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
           </div> */}
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Outreaches
-          </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Outreaches
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Outreach2} />
-            <div className="grid-right">
-              <ActivityPictures src={Outreach1} />
-              <ActivityPictures src={Outreach3} />
-              <ActivityPictures src={Outreach4} />
-              <ActivityPictures src={Outreach5} />
+            <div className="image-container">
+              <ActivityPictures src={Outreach2} />
+              <div className="grid-right">
+                <ActivityPictures src={Outreach1} />
+                <ActivityPictures src={Outreach3} />
+                <ActivityPictures src={Outreach4} />
+                <ActivityPictures src={Outreach5} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            To inform people about their health and everything related to it, we
-            employ innovative, strategic, and dynamic approaches.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              Through research, IFUMSA is tasked with gathering reliable
-              information about health and educating our community on such
-              matters. We also collaborate with governmental and
-              non-governmental organizations to improve community health, plans
-              awareness campaigns, and conducts outreach initiatives in schools,
-              markets, villages, and other settings.
-            </Collapsible>
-          </Typograpghy>
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Academic Activities
-          </Typograpghy>
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              To inform people about their health and everything related to it,
+              we employ innovative, strategic, and dynamic approaches.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                Through research, IFUMSA is tasked with gathering reliable
+                information about health and educating our community on such
+                matters. We also collaborate with governmental and
+                non-governmental organizations to improve community health,
+                plans awareness campaigns, and conducts outreach initiatives in
+                schools, markets, villages, and other settings.
+              </Collapsible>
+            </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Academic Activities
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Academic2} />
-            <div className="grid-right">
-              <ActivityPictures src={Academic5} />
-              <ActivityPictures src={Academic3} />
-              <ActivityPictures src={Academic4} />
-              <ActivityPictures src={Academic1} />
+            <div className="image-container">
+              <ActivityPictures src={Academic2} />
+              <div className="grid-right">
+                <ActivityPictures src={Academic5} />
+                <ActivityPictures src={Academic3} />
+                <ActivityPictures src={Academic4} />
+                <ActivityPictures src={Academic1} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            We have established ourselves as a prestigious medical student
-            association due to our history of consistent excellence in academic
-            and debate competitions. This is not about to change any time soon,
-            either. We boast a membership of intellectuals who are eager to
-            learn and are fully committed to the association's cause.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              The renowned "Medicus," a biennial intercollegiate quiz
-              competition that it has won twice in the two editions since its
-              inception, is organized by the IFUMSA Quiz and Debate Club. The
-              most recent competition, which was held in February 2022, featured
-              schools from five geopolitical zones and was arguably one of the
-              largest and most competitive intercollegiate medical competitions
-              in recent memory.
-            </Collapsible>
-          </Typograpghy>
-          {/* <div className="button">
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              We have established ourselves as a prestigious medical student
+              association due to our history of consistent excellence in
+              academic and debate competitions. This is not about to change any
+              time soon, either. We boast a membership of intellectuals who are
+              eager to learn and are fully committed to the association's cause.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                The renowned "Medicus," a biennial intercollegiate quiz
+                competition that it has won twice in the two editions since its
+                inception, is organized by the IFUMSA Quiz and Debate Club. The
+                most recent competition, which was held in February 2022,
+                featured schools from five geopolitical zones and was arguably
+                one of the largest and most competitive intercollegiate medical
+                competitions in recent memory.
+              </Collapsible>
+            </Typograpghy>
+            {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
           </div> */}
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Health Week
-          </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Health Week
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Healthweek3} />
-            <div className="grid-right">
-              <ActivityPictures src={HealthWeek7} />
-              <ActivityPictures src={healthweek8} />
-              <ActivityPictures src={PregnantWoman} />
-              <ActivityPictures src={Healthweek9} />
+            <div className="image-container">
+              <ActivityPictures src={Healthweek3} />
+              <div className="grid-right">
+                <ActivityPictures src={HealthWeek7} />
+                <ActivityPictures src={healthweek8} />
+                <ActivityPictures src={PregnantWoman} />
+                <ActivityPictures src={Healthweek9} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            IFUMSAITES' Healthweek is an annual event during which the
-            association plans a variety of programs to ensure that IFUMSAITES
-            become a well-rounded group of medical practitioners.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              This Healthweek has featured the following programs in recent
-              years: an opening rally, an articine, a scientific conference, a
-              public lecture, a debate competition, the Wale Okediran Football
-              Cup, and, of course, a grand dinner party.
-              <br />
-              <br />
-              We are looking forward to the 36th edition of Healthweek.
-            </Collapsible>
-          </Typograpghy>
-          {/* <div className="button">
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              IFUMSAITES' Healthweek is an annual event during which the
+              association plans a variety of programs to ensure that IFUMSAITES
+              become a well-rounded group of medical practitioners.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                This Healthweek has featured the following programs in recent
+                years: an opening rally, an articine, a scientific conference, a
+                public lecture, a debate competition, the Wale Okediran Football
+                Cup, and, of course, a grand dinner party.
+                <br />
+                <br />
+                We are looking forward to the 36th edition of Healthweek.
+              </Collapsible>
+            </Typograpghy>
+            {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
           </div> */}
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            Entrepreneurship {"&"} Economic
-          </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              Entrepreneurship {"&"} Economic
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={EECONE} />
-            <div className="grid-right">
-              <ActivityPictures src={EECFOUR} />
-              <ActivityPictures src={EECSIX} />
-              <ActivityPictures src={EECTWO} />
-              <ActivityPictures src={EECFIVE} />
+            <div className="image-container">
+              <ActivityPictures src={EECONE} />
+              <div className="grid-right">
+                <ActivityPictures src={EECFOUR} />
+                <ActivityPictures src={EECSIX} />
+                <ActivityPictures src={EECTWO} />
+                <ActivityPictures src={EECFIVE} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            The association has recently just had its 2nd Entrepreneurship and
-            Economic Summit. The first which held in the year 2020 as a virtual
-            event during the COVID pandemic under the administration of Dr.
-            Akinola Beloved.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              This program was borne out of the motivation of producing a crop
-              of medical doctors who are entrepreneurially minded and can stand
-              head to head with their colleagues in other climes of the world.
-              <br />
-              <br />
-              The last edition was a three-day event that included a Symposium,
-              pitching competition, award presentation, and a roundtable
-              discussion session.
-            </Collapsible>
-          </Typograpghy>
-          {/* <div className="button">
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              The association has recently just had its 2nd Entrepreneurship and
+              Economic Summit. The first which held in the year 2020 as a
+              virtual event during the COVID pandemic under the administration
+              of Dr. Akinola Beloved.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                This program was borne out of the motivation of producing a crop
+                of medical doctors who are entrepreneurially minded and can
+                stand head to head with their colleagues in other climes of the
+                world.
+                <br />
+                <br />
+                The last edition was a three-day event that included a
+                Symposium, pitching competition, award presentation, and a
+                roundtable discussion session.
+              </Collapsible>
+            </Typograpghy>
+            {/* <div className="button">
             <Button isPrimary>
               View More {">>"} <Shine />
             </Button>
           </div> */}
-        </EachSection>
-        <EachSection>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            align="center"
-            style={{ padding: "4rem 0 2rem" }}
-          >
-            DOCTOR PLUS SERIES
-          </Typograpghy>
+          </EachSection>
+          <EachSection>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              align="center"
+              style={{ padding: "4rem 0 2rem" }}
+            >
+              DOCTOR PLUS SERIES
+            </Typograpghy>
 
-          <div className="image-container">
-            <ActivityPictures src={Plus2} />
-            <div className="grid-right">
-              <ActivityPictures src={Plus1} />
-              <ActivityPictures src={Plus3} />
-              <ActivityPictures src={Plus4} />
-              <ActivityPictures src={Plus5} />
+            <div className="image-container">
+              <ActivityPictures src={Plus2} />
+              <div className="grid-right">
+                <ActivityPictures src={Plus1} />
+                <ActivityPictures src={Plus3} />
+                <ActivityPictures src={Plus4} />
+                <ActivityPictures src={Plus5} />
+              </div>
             </div>
-          </div>
-          <Typograpghy
-            align="left"
-            color={colors.primary}
-            lineHeight="3rem"
-            style={{ paddingTop: "4rem" }}
-          >
-            The Doctor Plus Series was birthed in 2017 as a series of event to
-            enlighten medical students on the career pathways beyond Medical and
-            Clinical practice and sometimes even delving more into opportunities
-            within the medical space.
-            <Collapsible buttonText="View" buttonType="primary">
-              <br />
-              The first edition was on Medical Entrepreneurship. The second
-              edition delved into Military Opportunities for Doctors and the
-              third enlightened medical students on the health technology.
-              <br />
-              <br />
-              The theme for Doctor Plus 4.0 was{" "}
-              <strong>
-                Accessing Global Opportunities for Medical Students
-              </strong>{" "}
-              and it was all value-packed, impactful and relevant
-            </Collapsible>
-          </Typograpghy>
-        </EachSection>
-      </BaseContainer>
-    </Wrapper>
+            <Typograpghy
+              align="left"
+              color={colors.primary}
+              lineHeight="3rem"
+              style={{ paddingTop: "4rem" }}
+            >
+              The Doctor Plus Series was birthed in 2017 as a series of event to
+              enlighten medical students on the career pathways beyond Medical
+              and Clinical practice and sometimes even delving more into
+              opportunities within the medical space.
+              <Collapsible buttonText="View" buttonType="primary">
+                <br />
+                The first edition was on Medical Entrepreneurship. The second
+                edition delved into Military Opportunities for Doctors and the
+                third enlightened medical students on the health technology.
+                <br />
+                <br />
+                The theme for Doctor Plus 4.0 was{" "}
+                <strong>
+                  Accessing Global Opportunities for Medical Students
+                </strong>{" "}
+                and it was all value-packed, impactful and relevant
+              </Collapsible>
+            </Typograpghy>
+          </EachSection>
+        </BaseContainer>
+      </Wrapper>
+    </Transitions>
   );
 }
 

@@ -8,6 +8,7 @@ import { emailValidation } from "../../utils";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import AnimateInView from "../AnimateInView";
 
 const EmailSubscribe = ({ onValidated, status, message }) => {
   const [email, setEmail] = useState("");
@@ -33,16 +34,18 @@ const EmailSubscribe = ({ onValidated, status, message }) => {
 
   return (
     <>
-      <Typograpghy
-        color={colors.secondary}
-        align="center"
-        size="3.6rem"
-        mt="13rem"
-        mb="5.8rem"
-        lineHeight="4.3rem"
-      >
-        Sign up for IFUMSA newsletter
-      </Typograpghy>
+      <AnimateInView>
+        <Typograpghy
+          color={colors.secondary}
+          align="center"
+          size="3.6rem"
+          mt="13rem"
+          mb="5.8rem"
+          lineHeight="4.3rem"
+        >
+          Sign up for IFUMSA newsletter
+        </Typograpghy>
+      </AnimateInView>
       <Input
         placeholder="Your Email Here..."
         color={colors.primary}

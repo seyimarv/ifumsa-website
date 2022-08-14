@@ -4,10 +4,11 @@ import { colors } from "../../styles/colors";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
 import SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
-
+import AnimateInView from "../../components/AnimateInView";
+import { container, fade } from "../../AnimationVariants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Adeyemo from "../../Images/Adeyemo.jpg";
-
+import AnimatedText from "../../components/AnimatedText";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,21 +82,28 @@ const ImageWrapper = styled.div`
   margin: 0px auto;
 `;
 const ImageScroll = () => {
+  const title = [
+    { type: "heading1", text: "Testimonies from Reputable Alumni" },
+  ];
   return (
     <Wrapper>
       <Container>
         <div>
-          <Typograpghy
-            color={colors.secondary}
-            size="3.6rem"
-            lineHeight="4rem"
-            style={{
-              marginBottom: "6rem",
-            }}
-            align="center"
-          >
-            Testimonies from Reputable Alumni
-          </Typograpghy>
+          <AnimateInView initial="hidden" variants={container}>
+            <Typograpghy
+              color={colors.secondary}
+              size="3.6rem"
+              lineHeight="4rem"
+              style={{
+                marginBottom: "6rem",
+              }}
+              align="center"
+            >
+              {title.map((item, index) => {
+                return <AnimatedText {...item} key={index} />;
+              })}
+            </Typograpghy>
+          </AnimateInView>
           <div className="d-flex">
             {/* <IconWrapper>
             <PrevIcon />
@@ -114,30 +122,33 @@ const ImageScroll = () => {
                 return (
                   <SwiperSlide key={data.name}>
                     {" "}
-                    <div className="body">
-                      <ImageWrapper>
-                        <Image src={Adeyemo} />
-                      </ImageWrapper>
-                      <Typograpghy
-                        color={colors.white}
-                        size="3.6rem"
-                        lineHeight="4rem"
-                        style={{
-                          marginBottom: "4.9rem",
-                          marginTop: "1rem",
-                        }}
-                        align="center"
-                      >
-                        {data.name}
-                      </Typograpghy>
-                      <Typograpghy color={colors.white} align="center">
-                        {data.words}
-                      </Typograpghy>
-                    </div>
+                    <AnimateInView variants={fade} initial={{ opacity: 0 }}>
+                      <div className="body">
+                        <ImageWrapper>
+                          <Image src={Adeyemo} />
+                        </ImageWrapper>
+                        <Typograpghy
+                          color={colors.white}
+                          size="3.6rem"
+                          lineHeight="4rem"
+                          style={{
+                            marginBottom: "4.9rem",
+                            marginTop: "1rem",
+                          }}
+                          align="center"
+                        >
+                          {data.name}
+                        </Typograpghy>
+                        <Typograpghy color={colors.white} align="center">
+                          {data.words}
+                        </Typograpghy>
+                      </div>
+                    </AnimateInView>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
+
             {/* <IconWrapper>
             <NextIcon />
           </IconWrapper> */}
