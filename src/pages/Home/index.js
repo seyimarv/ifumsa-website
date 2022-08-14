@@ -412,10 +412,7 @@ const Home = () => {
                   the globe without any limit.
                 </Typograpghy>
               </AnimateInView>
-              <AnimateInView
-                initial={{ opacity: 0, y: 10, zIndex: -1 }}
-                variants={fade}
-              >
+              <AnimateInView initial="hidden" variants={container}>
                 <Typograpghy
                   color={colors.secondary}
                   size="3.6rem"
