@@ -6,7 +6,7 @@ import AboutImage from "../../Images/about.png";
 import { SRBleadership } from "../Leadership/utils";
 import Typograpghy from "../../components/Typography/Typograpghy";
 import { devices } from "../../styles/mediaQueries";
-import ExecutivesImage from "../../Images/Executives.jpg";
+import ExecutivesImage from "../../Images/ExecutiveImage.jpeg";
 import Image from "../../components/ImageComponent";
 import { Container as BodyContainer } from "../../styles/container";
 import Transitions from "../../components/pageTransitions";
