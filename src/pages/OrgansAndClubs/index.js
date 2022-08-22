@@ -329,13 +329,12 @@ function OrgansAndClubs() {
                 size="1.5rem"
                 style={{ paddingTop: "2rem" }}
               >
-                <span>IFEMED Journal Club</span> was established in 2012 as an
-                organ of IFUMSA. The club was founded based on the vision of
-                creating health awareness among the populace and to be the most
-                vocal and visible platform for health awareness in Osun State.
-                Thus, the club uses dynamic, strategic and innovative approaches
-                to keep people informed about their health and all that pertains
-                to it.
+                The story of the IFEMED Journal Club is akin to the story of the
+                Faculty (now College) of Health Sciences and Nigeria’s. It is
+                the dream of our fathers becoming real. Through the decades, it
+                has grown from a seed to a wonderful tree admired and cherished,
+                with a distinct future of becoming a cedar of Lebanon having her
+                name deeply etched in the sands of time and in the hall of fame.
               </Typograpghy>
               <Collapsible buttonText={"View"} buttonType="primary">
                 <Typograpghy
@@ -345,13 +344,71 @@ function OrgansAndClubs() {
                   size="1.5rem"
                   style={{ paddingTop: "2rem" }}
                 >
-                  This club is responsible for acquiring valid information about
-                  health through research and educating our community on such
-                  health-related issues. Other activities of the club include:
-                  liaising with governmental and non- governmental organization
-                  in improving health on our community, organizing awareness
-                  programmes, school outreaches, market outreaches, village
-                  outreaches and so much more.
+                  The originator of the IFEMED vision may never be known for
+                  sure, having started in the mind of someone who (fortunately)
+                  could not keep it to himself, and shared it with a group of
+                  people - which were the then eight executive members of IFUMSA
+                  (1975/1976 session).
+                  <br />
+                  <br />
+                  Undoubtedly, the vision was shared by all with much enthusiasm
+                  that it was tabled before the Student Representative Body (the
+                  highest decision-making body of IFUMSA). At her sitting on
+                  Saturday 22nd of October 1975, the SRB appointed a Medical
+                  Journal Committee (MJC) to be overseen by the then Public
+                  Relations Officer, Tonye Romeo.The MJC was to conduct a
+                  feasibility study and set the Club on course.
+                  <br />
+                  <br />
+                  By the second week in December of the same year, the MJC had
+                  successfully completed her duties by appointing an Editorial
+                  Board, Staff Advisers, gotten advert placements and a capable
+                  publisher, raised a sum of #60.50 from some willing members of
+                  Staff of the Faculty and decided that the Journal would be
+                  published biannually - in February and August-two editions per
+                  volume.
+                  <br />
+                  <br />
+                  It was the duo of Drs.Tokunbo Fabamwo and Demola Denloye, who
+                  later would become IFUMSA President and Vice President that
+                  suggested the name ‘IFEMED Journal Club’, which the MJC
+                  accepted.
+                  <br />
+                  <br />
+                  With all these achieved, they (the MJC) handed over to the
+                  editorial Board of IFEMED Journal Club, led by Lanre Alabi,
+                  the first Editor-in-Chief, who never lived to see the maiden
+                  edition launched. He died in November, 1976. May his gentle
+                  soul rest in perfect peace.
+                  <br />
+                  <br />
+                  On Tuesday, 15th February, 1977, during the second annual
+                  health week tagged: “The Family in Health Disease”, the maiden
+                  issue of the Journal was launched. In his speech, Late
+                  Prof.T.A.I Grillo – foundation Dean of the Faculty – who
+                  launched the Journal, advised the club to choose her
+                  executives solely on merit and not on political manoeuvres.
+                  <br />
+                  <br />
+                  In the pursuit of excellence, the structure of the Club has
+                  kept changing. At inception, the Club had an Editorial Board
+                  comprising students and Editorial Consultants (which were
+                  lecturers in the College of Health Sciences).
+                  <br />
+                  <br />
+                  The Editorial Board consisted of the Editor-in-Chief, the
+                  Associate Editor-in-Chief, Circulation Managers (3), Business
+                  Managers (2), Production Managers (2), Art Directors (2), and
+                  a News Editor. With a number of modifications over the years,
+                  the editorial board now consists of an Editor-in-Chief, Deputy
+                  Editor, Associate Editor, Board Secretary, Graphics Editor,
+                  Business Manager, Financial Manager and Publicity Secretary.
+                  <br />
+                  <br />
+                  Through the decades, IFEMED has proved to be worth her salt by
+                  an unrelenting effort in publishing Journals on topical issues
+                  peculiar to our environment despite the many hydra-headed
+                  monsters that constantly stare her in the face.
                 </Typograpghy>
                 <Typograpghy
                   align="left"
