@@ -1,21 +1,24 @@
 import "./App.css";
+import { lazy, Suspense } from "react";
 import GlobalStyle from "./GlobalStyle";
-import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Leadership from "./pages/Leadership";
-import Activities from "./pages/Activities";
-import Structure from "./pages/Structure";
-import OrgansAndClubs from "./pages/OrgansAndClubs";
-import Contact from "./pages/Contact";
-import Support from "./pages/Support";
 import MainPanel from "./components/MainPanel";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Leadership = lazy(() => import("./pages/Leadership"));
+const Activities = lazy(() => import("./pages/Activities"));
+const Structure = lazy(() => import("./pages/Structure"));
+const OrgansAndClubs = lazy(() => import("./pages/OrgansAndClubs"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Support = lazy(() => import("./pages/Support"));
+
 function App() {
   const location = useLocation();
   return (
-    <div>
+    <Suspense fallback={<></>}>
       <GlobalStyle />
       <MainPanel>
         <AnimatePresence exitBeforeEnter>
@@ -31,7 +34,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </MainPanel>
-    </div>
+    </Suspense>
   );
 }
 
