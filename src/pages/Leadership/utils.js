@@ -1,13 +1,13 @@
-import President from "../../Images/Lolu.jpeg";
-import Shittu from "../../Images/Shittu.jpeg";
-import Ebenezer from "../../Images/Ebenezer.jpeg";
-import Miracle from "../../Images/Miracle.jpeg";
-import Dumomi from "../../Images/Dumomi.jpeg";
-import Victoria from "../../Images/Victoriq.jpeg";
-import Aminu from "../../Images/Aminu.jpeg";
-import Badru from "../../Images/Badru.jpeg";
-import Evelyn from "../../Images/Evelyn.jpeg";
-import Dolapo from "../../Images/Dolapo.jpeg";
+import President from "../../Images/kolade.jpg";
+import Evelyn from "../../Images/evelyn.jpg";
+import Komolafe from "../../Images/komolafe.jpg";
+import Daniel from "../../Images/daniel.jpg";
+import Pelumi from "../../Images/pelumi.jpg";
+import Claire from "../../Images/claire.jpg";
+import Olamide from "../../Images/olamide.jpg";
+import Victor from "../../Images/victor.jpg";
+import Tosin from "../../Images/tosin.jpg";
+import Gbeminiyi from "../../Images/gbeminiyi.jpg";
 import Speaker from "../../Images/Joshua.jpeg";
 import DeputySpeaker from "../../Images/Kizi.jpeg";
 import Clerk from "../../Images/Clerk.jpeg";
@@ -26,53 +26,53 @@ import Famokunwa from "../../Images/Famokunwa.jpeg";
 export const Council = [
   {
     image: President,
-    name: "Akinloluwa S. Akinteye",
+    name: "Kolade Adegoke James",
     title: "President",
   },
   {
-    image: Shittu,
-    name: "Shittu Victoria",
+    image: Evelyn,
+    name: "Evelyn Temidayo Atoyebi",
     title: "Vice President",
   },
   {
-    image: Ebenezer,
-    name: "Ebenezer Lawrence",
+    image: Komolafe,
+    name: "Olaitan Deborah Komolafe",
     title: "General Secretary",
   },
   {
-    image: Miracle,
-    name: "Ayobami M. Olajuyigbe",
+    image: Daniel,
+    name: "Daniel Toluwa Balogun",
     title: "Public Relation Officer",
   },
   {
-    image: Dumomi,
-    name: "Durojaye Dunmomi",
-    title: "Asst. Gen. Secretary",
+    image: Pelumi,
+    name: "Oluwapelumi Blessing Sobayo",
+    title: "Assistant General Secretary",
   },
   {
-    image: Victoria,
-    name: "Ezembu Victoria",
+    image: Claire,
+    name: "Clare Chimelumma Akwuba",
     title: "Treasurer",
   },
   {
-    image: Aminu,
-    name: "Aminu Kehinde",
+    image: Olamide,
+    name: "Olamide Mary Olayade",
     title: "Director of Socials",
   },
   {
-    image: Dolapo,
-    name: "Idowu Dolapo",
+    image: Gbeminiyi,
+    name: "Olúwagbéminíyì Ọlájídé Ajélétí",
     title: "Financial Secretary",
   },
   {
-    image: Badru,
-    name: "Badru Muhydeen",
+    image: Victor,
+    name: "Victor Olawale Adewumi",
     title: "Director of Sports",
   },
   {
-    image: Evelyn,
-    name: "Atoyebi  Evelyn",
-    title: "Welfare Director",
+    image: Tosin,
+    name: "Oluwatosin Bunmi Ajewole",
+    title: "Welfare Secretary",
   },
 ];
 
